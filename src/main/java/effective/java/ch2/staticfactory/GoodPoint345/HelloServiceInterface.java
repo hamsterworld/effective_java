@@ -1,7 +1,5 @@
 package effective.java.ch2.staticfactory.GoodPoint345;
 
-import java.util.Optional;
-import java.util.ServiceLoader;
 
 public interface HelloServiceInterface {
 
@@ -22,8 +20,6 @@ public interface HelloServiceInterface {
      *  만약에 위에 구현체가 없다고 가정해보자. (static도 지워주자.)
      *  그리고 아래를 참고
      * */
-
-
 
     /**
      *  ServiceLoader라고 자바가 기본으로 제공해주는 정적팩토리매서드가 있다.

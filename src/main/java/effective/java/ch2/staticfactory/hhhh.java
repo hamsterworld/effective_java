@@ -5,7 +5,7 @@ import effective.java.ch2.staticfactory.GoodPoint345.HelloServiceInterface;
 import java.util.Optional;
 import java.util.ServiceLoader;
 
-public class 생성자대신정적팩토리매서드를고려하라 {
+public class hhhh {
 
     /**
      * 정적팩토리매서드를 고려하면 좋은점
