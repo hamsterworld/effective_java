@@ -23,20 +23,7 @@ public interface HelloServiceInterface {
      *  그리고 아래를 참고
      * */
 
-    public static void main(String[] args) {
-        ServiceLoader<HelloServiceInterface> loader = ServiceLoader.load(HelloServiceInterface.class);
-        //등록된 구현체가 있을수도 없을수도있으니 Optional
-        Optional<HelloServiceInterface> helloServiceInterfaceOptional = loader.findFirst();
-        helloServiceInterfaceOptional.ifPresent(h ->{
-            System.out.println(h.hello());
-        });
-        //하면 출력된다. 아니 어떻게 interface밖에없는데?! 구현된게 나오지?
-        //
 
-        HelloServiceInterface englishHelloService = new EnglishHelloService();
-        //위에 코드는 englishHelloservice에 의존적이 된다.
-
-    }
 
     /**
      *  ServiceLoader라고 자바가 기본으로 제공해주는 정적팩토리매서드가 있다.

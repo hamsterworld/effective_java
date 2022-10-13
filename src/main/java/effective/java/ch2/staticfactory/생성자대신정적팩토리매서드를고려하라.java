@@ -1,5 +1,10 @@
 package effective.java.ch2.staticfactory;
 
+import effective.java.ch2.staticfactory.GoodPoint345.HelloServiceInterface;
+
+import java.util.Optional;
+import java.util.ServiceLoader;
+
 public class 생성자대신정적팩토리매서드를고려하라 {
 
     /**
@@ -16,6 +21,10 @@ public class 생성자대신정적팩토리매서드를고려하라 {
      * 정적 팩터리 매서드는 프로그래머가 찾기힘들다.
      * */
     public static void main(String[] args) {
-
+        ServiceLoader<HelloServiceInterface> loader = ServiceLoader.load(HelloServiceInterface.class);
+        Optional<HelloServiceInterface> helloServiceInterfaceOptional = loader.findFirst();
+        helloServiceInterfaceOptional.ifPresent(h->{
+            System.out.println(h.hello());
+        });
     }
 }
