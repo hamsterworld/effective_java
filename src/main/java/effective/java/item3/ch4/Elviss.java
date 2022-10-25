@@ -29,6 +29,7 @@ public enum Elviss implements IElvis {
      *  그리고 client code가 interface코드를 사용하도록한다.
      *  test시에는 interface의 별도의 구현체를 넘겨주도록한다.
      */
+
     public static void main(String[] args) {
         Elviss elvis = Elviss.INSTANCE;
         elvis.leaveTheBuilding();

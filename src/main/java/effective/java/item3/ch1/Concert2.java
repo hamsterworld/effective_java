@@ -35,7 +35,7 @@ public class Concert2 {
     private IElvis elvis;
 
     public Concert2(IElvis ielvis){
-        this.elvis = elvis;
+        this.elvis = ielvis;
     }
 
     public void perform(){
