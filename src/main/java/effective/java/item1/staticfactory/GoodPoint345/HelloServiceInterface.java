@@ -29,7 +29,6 @@ public interface HelloServiceInterface {
      *  나는 인터페이스를 통해 코드를 짯고
      *  이 코드가 어떤구현체가올지모를때, 사용한다.
      *  대표적으로 JDBC가 있다.
-     *
      */
 
 }

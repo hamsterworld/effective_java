@@ -5,7 +5,6 @@ package effective.java.item3.ch3;
  *  정적 팩토리의 메서드 참조를 공급자로 사용할수있다.
  *  이방법으로하면 단점은 동일 1.test문제 2.리플렉션문제 3.직렬화역직렬화문제
  *  해결책도 전부 동일하다.
- *
  */
 public class Elvis implements Singer {
 
@@ -48,8 +47,6 @@ public class Elvis implements Singer {
         //정적팩토리의 매서드참조를 공급자로 사용할수있다.
         //
         //
-
-
 
 
     }

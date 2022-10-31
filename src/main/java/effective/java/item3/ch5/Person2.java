@@ -3,12 +3,12 @@ package effective.java.item3.ch5;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
  *  이번엔 static한 매서드참조가 아닐때.
- *
  */
 public class Person2 {
 
@@ -52,7 +52,6 @@ public class Person2 {
 
         /**
          *  3.세번째로 임의객체로 해줄수도있다!
-         *
          */
 
 //        public int compareByAge(Person2 b){
@@ -70,6 +69,7 @@ public class Person2 {
          * 결국 매서드참조는 하나의 매서드만 사용하는 람다식이므로.
          */
 
+
         ArrayList<LocalDate> dates = new ArrayList<>();
         dates.add(LocalDate.of(1982,7,12));
         dates.add(LocalDate.of(2002,2,3));
@@ -81,7 +81,14 @@ public class Person2 {
         dates.stream().map(aNew).collect(Collectors.toList());
 
         //만약에 Person2에 생성자가 하나더있다고 가정해보면
-        //Person2::new에서 원하는 생성자 참조를 하고싶을때 어떤식으로하면 원하는 생성자를 사용할수있을가.
+        //Person2::new에서 원하는 생성자 참조를 하고싶을때 어떤식으로하면 원하는 생성자를 사용할수있을까.
+
+
+
+        //추가보충
+        BiFunction<String,String,Boolean> f = String::equals;
+        MyClass myClass = new MyClass();
+        BiFunction<String,String,Boolean> f1 = myClass::equals;
 
     }
 

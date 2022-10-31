@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 public class reflection {
 
     /**
-     * class정보는 JVM에있는 클래스로더가 읽어드린다.
+     *  class정보는 JVM에있는 클래스로더가 읽어드린다.
      *  그리고 해당하는 정보를 메모리 어딘가에 둔다.
      *  이정보를 통해서 많은것을 할수가있다.
      *  그래서 리플랙션을 사용해서 클래스정보를 이용해
@@ -33,7 +33,6 @@ public class reflection {
         Annotation[] annotations = aClass.getAnnotations();
         Method declaredMethod = aClass.getDeclaredMethod("test");
         System.out.println(declaredMethod.getName());
-
 
     }
 

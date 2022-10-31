@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 /**
  *  리플렉션을 이용하면 싱글톤이 깨지게된다.
- *
- *
- *
  */
 public class Elvis implements Serializable {
 

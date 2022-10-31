@@ -12,8 +12,6 @@ public class test {
         functionalInterface.test2();
         FunctionalInterface.test3();
 
-
-
         FunctionalInterface<String> functionalInterface1 = new FunctionalInterface<>() {
             @Override
             public String Test() {
@@ -27,7 +25,7 @@ public class test {
         System.out.println(new FunctionalInterface<>() {
             @Override
             public String Test() {
-                return "Hello java";
+                return "익명클래스는 이러고 끝이다.";
             }
         });
 
@@ -38,6 +36,7 @@ public class test {
             return "no hi";
         };
 
+        System.out.println(supplier.get());
 
 
         //익명클래스를 매개변수로 받을때

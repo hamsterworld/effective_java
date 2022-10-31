@@ -2,7 +2,6 @@ package effective.java.item3.ch5;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Person {
 
@@ -17,7 +16,8 @@ public class Person {
     }
 
     public static int compareByAge(Person a,Person b){
-        return a.birthday.compareTo(b.birthday);
+        int i = a.birthday.compareTo(b.birthday);
+        return i;
     }
 
     public static void main(String[] args) {
@@ -40,7 +40,6 @@ public class Person {
         people.sort((p1,p2) -> Person.compareByAge(p1,p2));
         //위에식을 아래처럼 변경할수있다.
         people.sort(Person::compareByAge);
-
         //첫번째로, 여기서 사용된것은 static한 래퍼런스를 참조한경우이다.
 
     }

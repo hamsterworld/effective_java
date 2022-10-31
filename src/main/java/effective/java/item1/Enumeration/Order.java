@@ -32,6 +32,7 @@ public class Order {
     public static void main(String[] args) {
         Arrays.stream(OrderStatus.values()).forEach(System.out::println);
 
+
         Order order = new Order();
         if(order.orderStatus == OrderStatus.DELIVERED){
             System.out.println("배달중");

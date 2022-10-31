@@ -25,6 +25,7 @@ public class Elvis implements IElvis{
     public static void main(String[] args) {
         Elvis elvis = Elvis.Instance;
         elvis.leaveTheBuilding();
+
     }
 
 
