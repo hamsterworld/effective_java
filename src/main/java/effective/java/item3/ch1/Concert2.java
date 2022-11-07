@@ -20,11 +20,6 @@ package effective.java.item3.ch1;
  *
  *   그래서 해결책
  *   만약에 Elvis를 interface로 만들엇다면?
- *
- *
- *
- *
- *
  */
 public class Concert2 {
 

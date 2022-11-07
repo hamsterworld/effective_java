@@ -5,7 +5,7 @@ import effective.java.item1.staticfactory.GoodPoint345.HelloServiceInterface;
 import java.util.Optional;
 import java.util.ServiceLoader;
 
-public class hhhh {
+public class staticfactory {
 
     /**
      * 정적팩토리매서드를 고려하면 좋은점

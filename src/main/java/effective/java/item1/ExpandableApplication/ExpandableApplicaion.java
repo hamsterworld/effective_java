@@ -13,19 +13,14 @@ public class ExpandableApplicaion {
     /**
      * spring di를 이용해 확장가능한 application을 만들어보자
      *
-     *
      * 서비스구현체들이 다양한형태로 구현될수있는
      * 서비스를 제공하여 확장가능한 application을
      * 가능하게한다면 그interface를 서비스제공자인터페이스라고한다.
-     *
-     *
      *
      */
 
 
     /**
-     *
-     *
      *  서비스제공등록 api = 서비스등록api를 제공하는애들
      *  ex)@Configuration을 통해
      *  bean을 등록하는애들

@@ -27,9 +27,6 @@ public class Settings {
     /**j
      * javadoc문서에서 아애는 생성자로 만드는게아니라
      * 바로 newInstance로 얻는구나 등등을 주석으로 알아야한다.
-     *
-     *
-     *
      * */
 
 

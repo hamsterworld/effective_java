@@ -19,8 +19,5 @@ public class VarargsSamples {
 
     /**
      * 가변인수는 오로지 하나만 사용가능하다. 그리고 맨뒤에 놔야한다.
-     *
-     *
-     *
      */
 }

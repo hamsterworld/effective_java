@@ -14,7 +14,6 @@ public class AdvancedSettings{
       * 대표적으로 List가 있다.
       * new ArrayList로도 만들수있지만, List.of("hamster","hamster1");
       * 이렇게 static으로도 만들수있다.
-      *
       * */
 
      Settings settings;

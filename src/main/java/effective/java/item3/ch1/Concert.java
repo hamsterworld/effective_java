@@ -25,9 +25,6 @@ package effective.java.item3.ch1;
  *   그러면 IElvisimpl로 가짜 대역을 넣어놓는것이다.
  *
  *   이래서 interface로 만들라는것이다.
- *
- *
- *
  */
 public class Concert {
 

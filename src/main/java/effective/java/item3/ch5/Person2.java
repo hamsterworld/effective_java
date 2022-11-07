@@ -2,6 +2,7 @@ package effective.java.item3.ch5;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -35,6 +36,7 @@ public class Person2 {
     }
 
     public static void main(String[] args) {
+
         ArrayList<Person2> people = new ArrayList<>();
         people.add(new Person2(LocalDate.of(1982,7,15)));
         people.add(new Person2(LocalDate.of(2011,3,2)));
@@ -65,11 +67,13 @@ public class Person2 {
         //그래서 가능하다.
 
 
+        people.stream().forEach(p ->{
+            System.out.println(p.getAge());
+        });
+
         /** new에서도 가능하다.
          * 결국 매서드참조는 하나의 매서드만 사용하는 람다식이므로.
          */
-
-
         ArrayList<LocalDate> dates = new ArrayList<>();
         dates.add(LocalDate.of(1982,7,12));
         dates.add(LocalDate.of(2002,2,3));
@@ -82,7 +86,6 @@ public class Person2 {
 
         //만약에 Person2에 생성자가 하나더있다고 가정해보면
         //Person2::new에서 원하는 생성자 참조를 하고싶을때 어떤식으로하면 원하는 생성자를 사용할수있을까.
-
 
 
         //추가보충

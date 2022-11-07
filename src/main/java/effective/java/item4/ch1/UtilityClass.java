@@ -34,8 +34,8 @@ public class UtilityClass {
         UtilityClass.hello();
         //물론 static을 인스턴스로 부를순있지만 권장하지않는다.
 
-//        UtilityClass utilityClass = new UtilityClass();
-//        utilityClass.hello();
+        //UtilityClass utilityClass = new UtilityClass();
+        //utilityClass.hello();
 
         //즉 위와같은 코드는 별루 안좋은코드고 선호되지도않는다.
         //그래서 이런 위와같은 실수를 줄이기위해서 어떻게 할것인가?

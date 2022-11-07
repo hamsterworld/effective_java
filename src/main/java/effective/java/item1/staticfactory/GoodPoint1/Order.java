@@ -4,7 +4,6 @@ public class Order {
 
     private boolean prime;
     private boolean urgent;
-
     private Product product;
 
 //    public Order(Product product,boolean prime){
@@ -22,7 +21,8 @@ public class Order {
 //        this.urgent = urgent;
 //    }
 
-    /** 위에와 같이 표현하고싶다.
+    /**
+     *  위에와 같이 표현하고싶다.
      *  위에꺼는 일반 주문
      *  밑에꺼는 긴급 주문
      *  하지만 자바의 오버로딩은 변수타입까지만 보기때문에
@@ -32,7 +32,9 @@ public class Order {
      *  그래서 책에서는 정적팩토리매서드로 표현하자라고 되어있다.
      */
 
+
     public static Order primeOrder(Product product){
+        //자기자신의 instance를 static으로서 사용해버리넴!?
         Order order = new Order();
         order.prime = true;
         order.product = product;
@@ -52,7 +54,6 @@ public class Order {
      *  팩토리매서드의 이름으로 더 잘 표현할수있다.
      *  이것이바로 첫번째 장점.
      * */
-
-
+    
 
 }
