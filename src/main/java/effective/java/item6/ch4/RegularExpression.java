@@ -25,6 +25,7 @@ public class RegularExpression {
 //            SPLIT_PATTERN3.matcher(name).matches();
         }
         System.out.println(System.nanoTime() - start);
+        while(true);
     }
 
 }
