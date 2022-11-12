@@ -1,4 +1,4 @@
-package effective.java.item7.ch1.listener;
+package effective.java.item7.ch3.listener;
 
 public class User {
 

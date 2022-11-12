@@ -16,7 +16,7 @@ public class BackgroundThread {
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
         PostRepository postRepository1 = new PostRepository();
         CacheKey Key2 = new CacheKey(1);
-        postRepository1.getPostById(Key2);
+//        postRepository1.getPostById(Key2);
 
         //이작업이 주기적으로 정리하는 작업이다.
         //이것을 backgroundThread로 돌리는것이다.

@@ -50,7 +50,6 @@ public class ChatRoom {
         Thread.sleep(5000L);
         List<WeakReference<User>> users = chatRoom.getUsers();
         System.out.println("채팅방에 지금 누가있나요? = " + (users.toString()));
-
     }
 
     /**
@@ -58,5 +57,6 @@ public class ChatRoom {
      * 이대로 사용하면 안된다.
      * 이방법은 어떻게 보면 1번이랑 비슷하다고볼수있다.
      */
+
 
 }

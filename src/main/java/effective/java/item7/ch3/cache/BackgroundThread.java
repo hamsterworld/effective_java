@@ -1,4 +1,4 @@
-package effective.java.item7.ch1.cache;
+package effective.java.item7.ch3.cache;
 
 import java.util.*;
 import java.util.concurrent.Executors;

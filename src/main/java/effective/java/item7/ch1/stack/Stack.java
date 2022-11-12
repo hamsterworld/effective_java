@@ -80,11 +80,14 @@ public class Stack {
             stack.push("" + i);
         }
 
+
         while(!(stack.size == 0)){
             System.err.println(stack.pop());
         }
 
-//        while(true);
+//        stack = null;
+
+        while(true);
 
     }
 }
