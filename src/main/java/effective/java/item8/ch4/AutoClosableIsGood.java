@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * java 7부터 들어온 autoclose다.
+ * java 7부터 들어온 autocloseable다.
  * autoclean의 장점은 try에다가 사용할수있다는점
  */
 public class AutoClosableIsGood implements AutoCloseable{

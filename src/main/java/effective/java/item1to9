@@ -8,5 +8,5 @@ item 4. instance를 막고 싶다면 private 생성자를 사용하라. --> util
 item 5. 의존객체주입을 사용하라(주입된 자원에따라 달라지는 인스턴스같은것들) -> 우리가아는 그 IOC container를 이용해서 외부에서 주입해주라는 말.
 item 6. 불필요한 객체생성을 하지마라.
 item 7. 다 쓴객체 참조를 해제하라.
-item 8.
-item 9.
+item 8. finalizer와 cleaner 사용을 피해라.
+item 9. try-finally 보다 try-with-resource를 사용하라.
