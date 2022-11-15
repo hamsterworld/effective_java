@@ -1,5 +1,8 @@
 package effective.java.item1.InterfaceandstaticMethod.extra;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Queue;
 import java.util.function.Supplier;
 
 public class test {
@@ -47,6 +50,16 @@ public class test {
             }
                 return null;
         } );
+
+        //인스턴스 불가화
+        //얻은 구현체는 interface로..
+        //결국 얻은 구현체는 interface대로 동작하기때문에.
+        //굳이 따로 사용법을 알필요가없다.
+        //요리사 interface를 얻엇으면 sheff.cook(); 알지만
+        //hambergersheff.hambegercook(); 인지뭔지 일단 익혀야할지도모른다.
+        //그리고 API를 작게만드는 경향도 있어서 매우좋다.
+//        Queue<Object> objects = Collections.asLifoQueue();
+//        List<Object> objects1 = Collections.checkedList();
 
     }
 }

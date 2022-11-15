@@ -8,12 +8,13 @@ package effective.java.item1.Enumeration;
  * type-safe라고도 표현한다.
  * 또 밑에 4가지는 오로지 인스턴스가 딱1개만 만들어진다.
  * 그래서 싱글톤패턴을 안전하게 구현하는것중하나가 열거형을 사용하는것이다.
- *
- *
  */
 public enum OrderStatus {
 
-    PREPARING(0),SHIPPED(1),DELIVERING(2),DELIVERED(3);
+    PREPARING(0),
+    SHIPPED(1),
+    DELIVERING(2),
+    DELIVERED(3);
 
     private int number;
 

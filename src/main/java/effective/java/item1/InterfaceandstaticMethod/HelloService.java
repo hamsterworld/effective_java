@@ -4,7 +4,7 @@ public interface HelloService {
 
     String hello();
 
-
+    Integer hello = 10;
     static String hi() {
         prepareMessage();
         return "hi";

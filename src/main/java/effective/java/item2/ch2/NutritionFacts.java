@@ -3,9 +3,11 @@ package effective.java.item2.ch2;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 
 @Builder
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
+@Getter
 public class NutritionFacts {
 
     private final int servingSize;  //필수
@@ -30,6 +32,7 @@ public class NutritionFacts {
      *  원래 빌더코드를 사용해야한다.
      *
      */
+
 
 
 }

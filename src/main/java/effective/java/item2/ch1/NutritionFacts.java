@@ -70,7 +70,6 @@ public class NutritionFacts {
     }
 
     /**
-     *
      *  생성자에 매개변수가 많다면 빌더를 고려하라.
      *  계층적(체이닝),자바빈즈(getter,setter)등보다는 빌더다.
      *  특히 자바빈즈는 set이 되지않은상태에서 인스턴스가 사용될수있다.
@@ -80,8 +79,6 @@ public class NutritionFacts {
      *  이런문제.
      *
      *  자바빈즈를 사용하면 불변필드로 만들기도힘들다.
-     *
-     *
      */
 
     public static void main(String[] args) {

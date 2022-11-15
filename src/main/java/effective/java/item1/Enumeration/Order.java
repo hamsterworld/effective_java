@@ -1,6 +1,8 @@
 package effective.java.item1.Enumeration;
 
 import java.util.Arrays;
+import java.util.EnumMap;
+import java.util.EnumSet;
 
 public class Order {
 
@@ -20,8 +22,6 @@ public class Order {
      *  type-safe가 전혀안된다.
      *
      *  열거형을하면 이런것들이 보호가 된다.
-     *
-     *
      * */
 
     /**
@@ -31,7 +31,6 @@ public class Order {
 
     public static void main(String[] args) {
         Arrays.stream(OrderStatus.values()).forEach(System.out::println);
-
 
         Order order = new Order();
         if(order.orderStatus == OrderStatus.DELIVERED){
@@ -43,6 +42,19 @@ public class Order {
             System.out.println("배달중");
         }
 
+        final EnumMap enumMap = new EnumMap<>(OrderStatus.class);
+        enumMap.put(OrderStatus.PREPARING,"준비중");
+        enumMap.put(OrderStatus.PREPARING,"테스트중");
+
+        //EnumMap은 총갯수가 정해져서나온다.
+        //위처럼 Key가 겹치면, 덮어씌우게된다.
+
+        //순서도 보장된다.
+        //순서를 변경하고싶다면 stream을 이용해서 comparator를 다시 정의해주면된다.
+
+        //abstract class라서 static으로 생성시켜줘야한다.
+        EnumSet<OrderStatus> set = EnumSet.allOf(OrderStatus.class);
+
         /**
          * Enum에서는 EnumMap과 EnumSet을 사용하는게 더좋다.
          */
@@ -53,6 +65,5 @@ public class Order {
 
     /**
      * 열거형은 싱글톤을 보장하기때문에 ==을 이용하여 비교해준다.
-     *
      */
 }

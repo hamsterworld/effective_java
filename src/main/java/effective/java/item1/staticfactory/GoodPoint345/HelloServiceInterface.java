@@ -5,13 +5,13 @@ public interface HelloServiceInterface {
 
     String hello();
 
-//    static HelloServiceInterface of(String lang){
-//        if(lang.equals("ko")){
-//            return new KoreanHelloService();
-//        } else {
-//            return new EnglishHelloService();
-//        }
-//    }
+    static HelloServiceInterface of(String lang){
+        if(lang.equals("ko")){
+            return new KoreanHelloService();
+        } else {
+            return new EnglishHelloService();
+        }
+    }
 
     /**
      *  인터페이스에서는 접근제어자를 생략하면 public이다.

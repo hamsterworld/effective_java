@@ -7,8 +7,10 @@ public interface FunctionalInterface<T> {
 
     //T Test2(); 추상매서드가 2개이상일수없다.
 
-    default void test2(){
+    default ProcessFile test2(){
+        ProcessFile processFile = new ProcessFile();
         System.out.println("default");
+        return processFile;
     }
 
     static void test3(){

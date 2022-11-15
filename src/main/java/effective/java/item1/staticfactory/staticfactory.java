@@ -21,10 +21,11 @@ public class staticfactory {
      * 정적 팩터리 매서드는 프로그래머가 찾기힘들다.
      * */
     public static void main(String[] args) {
-        ServiceLoader<HelloServiceInterface> loader = ServiceLoader.load(HelloServiceInterface.class);
-        Optional<HelloServiceInterface> helloServiceInterfaceOptional = loader.findFirst();
-        helloServiceInterfaceOptional.ifPresent(h->{
-            System.out.println(h.hello());
-        });
+//        ServiceLoader<HelloServiceInterface> loader = ServiceLoader.load(HelloServiceInterface.class);
+//        Optional<HelloServiceInterface> helloServiceInterfaceOptional = loader.forEach();
+//        helloServiceInterfaceOptional.ifPresent(h->{
+//            System.out.println(h.hello());
+//        });
+
     }
 }
