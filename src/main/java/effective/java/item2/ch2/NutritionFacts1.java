@@ -1,12 +1,10 @@
 package effective.java.item2.ch2;
 
-import effective.java.item2.ch3.NyPizza;
 import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 @ToString
 public class NutritionFacts1 {

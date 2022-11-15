@@ -1,13 +1,12 @@
 package effective.java.item2.ch2;
 
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
 @Builder
-@AllArgsConstructor
 @Getter
+@AllArgsConstructor
 public class NutritionFacts {
 
     private final int servingSize;  //필수
