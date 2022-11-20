@@ -1,4 +1,4 @@
-package effective.java.item10.ch2;
+package effective.java.item10.ch7;
 
 public class Point {
     @Override
