@@ -8,6 +8,7 @@ class CaseInsensitiveStringTest {
 
     @Test
     void test(){
+
         CaseInsensitiveString cis = new CaseInsensitiveString("Polish"); //대문자
         CaseInsensitiveString cis2 = new CaseInsensitiveString("Polish");
         String polish = "polish"; //소문자
@@ -15,6 +16,7 @@ class CaseInsensitiveStringTest {
         System.out.println(cis.equals(polish)); //내가정의한 equals때문에 같다고나온다.
 
         ArrayList<CaseInsensitiveString> list = new ArrayList<>();
+
         list.add(cis);
 
         System.out.println(list.contains(polish));

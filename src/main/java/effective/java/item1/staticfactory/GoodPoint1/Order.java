@@ -36,6 +36,7 @@ public class Order {
     public static Order primeOrder(Product product){
         //자기자신의 instance를 static으로서 사용해버리넴!?
         Order order = new Order();
+        Order order1 = new Order();
         order.prime = true;
         order.product = product;
         return order;
