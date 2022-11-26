@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * comparator 를 구현할때 어떠한 규약을 따라야하는지 알아보자.
  * 1.반사성
  */
-public class Comparatorrr {
+public class Comparatorrr{
 
     public static void main(String[] args) {
         //BigDecimal은 대표적으로 Comparator를 구현하고있는 class 이다.
