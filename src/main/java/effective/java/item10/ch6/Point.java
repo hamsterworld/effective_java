@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 /**
+ *
  * Value Class 란?
  * class 처럼 생겼지만 이런 Point Class 마냥
  * Address Class (나라, 지역구, 아파트), Name Class(first name, middle name, last name)..등등과같이
