@@ -35,4 +35,5 @@ public class ColorPoint extends Point{
         //o가 ColorPoint면 색상까지 비교한다.
         return super.equals(o) && ((ColorPoint) o).color == color;
     }
+
 }

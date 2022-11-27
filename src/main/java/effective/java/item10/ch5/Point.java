@@ -40,7 +40,7 @@ public class Point {
         // 동기화에 사용하는 lock 을 비교했다.
         // sychronized (new Object()){
         //
-        // } new Object해서 락으로 쓸만한 오브젝트를 새로만들수있다.
+        // } new Object 해서 락으로 쓸만한 오브젝트를 새로만들수있다.
         // 또 이 락을 밖에다가 두고쓸수도있다.
         // 그래서 equals 에서 락이런걸로 비교하지마라 왜냐면
         // 락은 비교되는 객체가 가지고있는 특수한 필드가 아니니까.
@@ -55,7 +55,7 @@ public class Point {
         //이렇게 구현할수도잇다.
 
         //근데 이렇게 모든규약을 지키면서 equals 를 만드는게 쉽지않다.
-        //그래서 구글에서 autovalue를 제공해준다.
+        //그래서 구글에서 autovalue 를 제공해준다.
         //근데 사용하는게 조금 까다롭다.
         Point p = (Point) o;
 
