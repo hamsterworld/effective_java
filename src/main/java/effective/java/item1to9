@@ -10,3 +10,11 @@ item 6. 불필요한 객체생성을 하지마라.
 item 7. 다 쓴객체 참조를 해제하라.
 item 8. finalizer와 cleaner 사용을 피해라.
 item 9. try-finally 보다 try-with-resource를 사용하라.
+
+item 10 - 14 는 모든 객체들의 공통 매서드에 관한 이야기이다.
+
+item 10. equals는 일반 규악을 지켜 재정의하라.
+item 11. equals를 재정의 하려거든 hashcode도 재정의해라.
+item 12. toString을 항상 재정의해라.
+item 13. clono은 주의해서 진행해라.
+item 14. comparable을 구현할지 고민하라.
