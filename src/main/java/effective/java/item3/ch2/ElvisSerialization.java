@@ -9,6 +9,7 @@ public class ElvisSerialization {
 
     //참고로할때 Elvis에서 implements에 Serializable를 해줘야된다.
     public static void main(String[] args) {
+
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("elvis.obj"))){
             out.writeObject(Elvis.Instance);
         } catch (IOException e){
@@ -24,6 +25,7 @@ public class ElvisSerialization {
         } catch (IOException | ClassNotFoundException e){
             e.printStackTrace();
         }
+
     }
 
     //결국에는 싱글톤을 쓰려면

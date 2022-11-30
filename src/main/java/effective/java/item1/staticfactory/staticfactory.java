@@ -17,7 +17,7 @@ public class staticfactory {
      * 5.정적 팩터리 매서드를 작성하는 시점에는 반환할 객체의 클래스가 존재하지않아도된다.
      *
      * 안좋은점
-     * 상속을하려면 public이나 protected 생성하기필요하니 정적팩토리매서드만 제공
+     * 상속을하려면 public 이나 protected 생성하기필요하니 정적팩토리매서드만 제공
      * 정적 팩터리 매서드는 프로그래머가 찾기힘들다.
      * */
     public static void main(String[] args) {

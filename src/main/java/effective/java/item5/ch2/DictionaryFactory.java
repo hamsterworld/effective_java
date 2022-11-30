@@ -1,9 +1,13 @@
 package effective.java.item5.ch2;
 
-import effective.java.item5.ch2.Dictionary;
 
-public class DictionaryFactory {
-    public Dictionary get() {
-        return null;
+public class DictionaryFactory{
+    public static Dictionary get() {
+        DefaultDictionary defaultDictionary = new DefaultDictionary();
+        return defaultDictionary;
     }
+
+//    public static Dictionary get() {
+//        return null;
+//    }
 }

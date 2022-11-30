@@ -8,8 +8,7 @@ class OrderTest {
 
     @Test
     void staticfactory(){
-        Order urgentOrder = Order.urgentOrder(new Product());
-        Order primeOrder = Order.primeOrder(new Product());
+        Order.primeOrder(new Product());
     }
 
 }

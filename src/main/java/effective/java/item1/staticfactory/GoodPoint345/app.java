@@ -1,12 +1,18 @@
 package effective.java.item1.staticfactory.GoodPoint345;
 
+
+
 public class app {
 
     public static void main(String[] args) {
 
-        //interface나 추상을 제공하면
-        HelloServiceInterface ko = HelloServiceInterface.of("ko");
-        ko.hello();
+        //요렇게 static factory 로 원하는대로 뽑아낼수있다.
+        HelloService ko = HelloServiceFactory.of("ko");
+
+        //자바8부터는 interface로도 가능
+        HelloServiceInterface ko1 = HelloServiceInterface.of("ko");
+        ko1.hello();
+
 
     }
 

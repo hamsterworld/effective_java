@@ -1,6 +1,6 @@
 package effective.java.item3.ch3;
 
-public class MetaElvis<T> {
+public class MetaElvis<T> implements Singer{
 
     private static final MetaElvis<Object> Instance = new MetaElvis<>();
 
@@ -24,6 +24,8 @@ public class MetaElvis<T> {
     public static void main(String[] args) {
         MetaElvis<String> elvis1 = MetaElvis.getInstance();
         MetaElvis<Integer> elvis2 = MetaElvis.getInstance();
+
+        Singer instance = MetaElvis.getInstance();
 
         //System.out.println(elvis1 == elvis2);
         //타입이 달라서 ==비교는 안된다.
@@ -54,4 +56,8 @@ public class MetaElvis<T> {
          */
     }
 
+    @Override
+    public void sing() {
+        System.out.println("랄라라");
+    }
 }

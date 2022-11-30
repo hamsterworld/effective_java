@@ -10,7 +10,7 @@ public class Deprecation {
      * @Deprecated in favor of
      * {@link #Deprecation(String)}
      */                                          //왼쪽처럼 주석을 남겨서 사용자제를 부탁한다. 그리고 대안도 작성.
-    @Deprecated(forRemoval = true,since = "1.2") //자바9부터 추가된 빨간색,버전기능
+//    @Deprecated(forRemoval = true,since = "1.2") //자바9부터 추가된 빨간색,버전기능
     public Deprecation(){
 
     }

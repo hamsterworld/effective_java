@@ -32,11 +32,9 @@ public class Order {
      *  그래서 책에서는 정적팩토리매서드로 표현하자라고 되어있다.
      */
 
-
     public static Order primeOrder(Product product){
         //자기자신의 instance를 static으로서 사용해버리넴!?
         Order order = new Order();
-        Order order1 = new Order();
         order.prime = true;
         order.product = product;
         return order;
@@ -50,8 +48,8 @@ public class Order {
     }
 
     /**
-     *  위에처럼 정적팩토리매서드를 사용해서 처리하라고 권장하고있다.
-     *  그러면 이렇게 만들어주는 객체의특징을 primeOrder,urgentOrder과같이
+     *  위에처럼 정적 팩토리 매서드를 사용해서 처리하라고 권장하고있다.
+     *  그러면 이렇게 만들어주는 객체의특징을 primeOrder,urgentOrder 과같이
      *  팩토리매서드의 이름으로 더 잘 표현할수있다.
      *  이것이바로 첫번째 장점.
      * */

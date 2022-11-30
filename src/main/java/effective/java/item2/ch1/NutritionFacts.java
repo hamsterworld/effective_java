@@ -82,7 +82,11 @@ public class NutritionFacts {
      */
 
     public static void main(String[] args) {
-        new NutritionFacts(1,1);
+        NutritionFacts nf = new NutritionFacts(1, 1);
+        NutritionFacts nf2 = new NutritionFacts(1, 1, 1);
+        NutritionFacts nf3 = new NutritionFacts(1, 1, 1, 1);
+
+
     }
 
 

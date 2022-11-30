@@ -16,6 +16,8 @@ public class Concert {
         Concert concert = new Concert();
         concert.start(Elvis::getInstance);
         concert.start(() -> Elvis.getInstance());
+
+        concert.start(MetaElvis::getInstance);
     }
 
 }

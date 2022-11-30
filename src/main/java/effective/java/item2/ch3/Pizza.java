@@ -23,7 +23,7 @@ public abstract class Pizza {
      * 아마 인터페이스가 <>있어서 표시해준거같음 원칙적으로는 이게맞다. 근데 1번처럼해도 문제는 없긴?하다....
      *
      * 3. Builder<T extends Builder<? super T>>
-     * T가 Builder를 구현한놈인데 그 구현한놈의 자손도 가능하다는 말.
+     * T가 Builder를 구현한놈인데 그 구현한놈의 부모도 가능하다는 말.
      *
      * 결국 중요한건 추상,인터페이스냐 class의 여부이냐 이차이가 큰듯?
      */
@@ -61,6 +61,7 @@ public abstract class Pizza {
              *
              * Optional null일지도 모르는 값을 처리하는데 초점
              * requireNonNull 해당 참조가 null이면 즉시 개발자에게 알리는 것이 목적이다.
+             *
              */
             toppings.add(Objects.requireNonNull(topping));
             return self();

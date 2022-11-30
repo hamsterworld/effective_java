@@ -20,13 +20,17 @@ public class RomanNumerals {
     }
 
     public static void main(String[] args) {
+
         boolean result = false;
         long start = System.nanoTime();
+
         for (int j = 0; j < Integer.MAX_VALUE; j++ ){
             // 성능 차이를 확인하려면 xxSlow 매서드에서 xxFast 매서드로 변경해보자
             result = isRomanNumeralSlow("THERGERG");
         }
+
         long end = System.nanoTime();
+
         System.out.println(end - start);
         System.out.println(result);
     }

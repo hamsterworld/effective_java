@@ -1,28 +1,14 @@
-package effective.java.item5.ch2;
+package effective.java.mypractice;
 
-public class SpellCheckerTest {
 
-    //Supplier 는 완벽한 factory 의 대체제이다.
-    public static void main(String[] args) {
+public class test {
 
-        // 아래와 같은건 안되긴함. 그래도 interface function 다른거 사용하면 될지도?
-//        Dictionary dictionary = DictionaryFactory.get("default");
-//        SpellChecker spellChecker = new SpellChecker(dictionary);
-
-        //이렇게하면 supplier 가 factory를 완벽히 대체하게된다.
-        SpellChecker spellChecker = new SpellChecker(() -> {
-            //이것저것 처리
-            return new DefaultDictionary();
-        });
-
-//        SpellChecker spellChecker = new SpellChecker(DefaultDictionary::new);
-//        spellChecker.isValid("test");
+//    private static final Dictionary dictionary = new DefaultDictionary();
 //
-//        SpellChecker spellChecker1 = new SpellChecker(MockDictionary::new);
-//        spellChecker1.isValid("test1");
-
-
-    }
+//    public static boolean spellcheck(String o){
+//        boolean contains = dictionary.contains(o);
+//        return contains;
+//    }
 
     /**
      * 받은 자원에 따라 동작이 변경된다.
@@ -51,6 +37,5 @@ public class SpellCheckerTest {
      * 근데 static factory 가 파라미터도 안받고 단순히 return 만해준다?
      * 그러면 이때 supplier 가 완벽한 대체제가 될수 있다는 말이다.
      */
-
 
 }

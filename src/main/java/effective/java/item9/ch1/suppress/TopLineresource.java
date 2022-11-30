@@ -8,9 +8,9 @@ public class TopLineresource {
 
     /**
      * 여기서는 둘다 보이는것을 확인할수있다.
-     * Suppressed로 2번째 오류도 볼수있다.
-     * 당연히 원한다면 catch , finally도 사용할수있다.
-     * try-with-resource를 쓴다고해서 못쓰는게아니다.
+     * Suppressed 로 2번째 오류도 볼수있다.
+     * 당연히 원한다면 catch , finally 도 사용할수있다.
+     * try-with-resource 를 쓴다고해서 못쓰는게아니다.
      */
     static String firstLineOfFile(String path) throws IOException {
         try(BadBufferedReader br = new BadBufferedReader(new FileReader(path))){
