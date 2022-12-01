@@ -1,4 +1,4 @@
-package effective.java.item16;
+package effective.java.item16.ch1;
 
 /**
  * public class 에서는 public 필드가 아닌

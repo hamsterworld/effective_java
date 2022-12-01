@@ -1,4 +1,4 @@
-package effective.java.item16;
+package effective.java.item16.ch1;
 
 public class privatePoint {
     private double x;

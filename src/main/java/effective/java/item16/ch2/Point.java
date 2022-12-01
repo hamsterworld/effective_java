@@ -1,8 +1,8 @@
-package effective.java.item16.ch1;
+package effective.java.item16.ch2;
 
 /**
- * public class 에서는 public 필드가 아닌
- * 접근자 매서드를 사용하라.
+ * public field 는 성능 문제까지도 있다.
+ * 어떻게 그게가능한가? 한번 알아보자.
  */
 public class Point {
 

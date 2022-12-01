@@ -1,4 +1,4 @@
-package effective.java.item16;
+package effective.java.item16.ch1;
 
 /**
  * 계속 강조하지만 package-public 은 control 이 불가능하다.
