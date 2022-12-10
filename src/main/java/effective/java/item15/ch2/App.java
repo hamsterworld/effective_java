@@ -9,10 +9,10 @@ import effective.java.item15.ch1.Member;
  * package-private
  * package-public
  *
- * public으로 선언하면 API가 되므로
+ * public 으로 선언하면 API 가 되므로
  * 하위 호환성을 유지하려면 영원히 관리해야한다.
  * --> 우리의 프로그램의 버전이 올라가고 그러면
- * 어딘가의 jar 파일에 나의 public api가 사용될수있다.
+ * 어딘가의 jar 파일에 나의 public api 가 사용될수있다.
  *
  * 그래서 만약에 client code 에서 나의 api를
  * 사용하고 있고 내가만약에 이 api 를

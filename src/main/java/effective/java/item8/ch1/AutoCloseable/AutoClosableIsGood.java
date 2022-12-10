@@ -14,6 +14,5 @@ public class AutoClosableIsGood implements AutoCloseable{
         } catch (Exception e){
             e.getMessage();
         }
-
     }
 }

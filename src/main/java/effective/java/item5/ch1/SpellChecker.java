@@ -31,7 +31,7 @@ public class SpellChecker {
 
     /**
      * 이렇게 유연하게 의존객체주입을 받아야한다.
-     * --> item1to14 code로 가보자.
+     * --> item1to14.txt code로 가보자.
      */
     private Dictionary DICTIONARY1;
 

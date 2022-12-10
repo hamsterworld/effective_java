@@ -10,8 +10,8 @@ public class BackgroundThread {
     public static void main(String[] args) throws InterruptedException {
 
         /**
-         * Background Thread를 이용한 주기적으로 clean up을 하는것을 실행한다.
-         * 이 밑에예제돌릴때 그냥 HashMap으로 변경!
+         * Background Thread 를 이용한 주기적으로 clean up을 하는것을 실행한다.
+         * 이 밑에예제돌릴때 그냥 HashMap 으로 변경!
          */
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
         PostRepository postRepository1 = new PostRepository();

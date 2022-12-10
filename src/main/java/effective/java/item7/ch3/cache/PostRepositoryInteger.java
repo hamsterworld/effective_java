@@ -12,7 +12,7 @@ public class PostRepositoryInteger {
     }
 
     /**
-     * 여기서 나중에 왜 Map key를 Integer로 쓰지않고 CacheKey라는 Object를 따로만들어서
+     * 여기서 나중에 왜 Map key 를 Integer 로 쓰지않고 CacheKey 라는 Object 를 따로만들어서
      * 사용했는지는 나중에 알려주겠다.
      */
 //    public Post getPostById(Integer id){

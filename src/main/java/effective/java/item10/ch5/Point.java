@@ -1,7 +1,7 @@
 package effective.java.item10.ch5;
 
 /**
- *  그럼 equals는 어떻게 구현해야 잘구현한것일까?
+ *  그럼 equals 는 어떻게 구현해야 잘구현한것일까?
  *  간단히 4가지규칙만 지키자.
  *
  *  1.가장 먼저 자기자신과 같은지보자.(반사성에 해당)
@@ -38,7 +38,7 @@ public class Point {
         // 여기서 중요한게 핵심적인 필드들이다.
         // 책에서 핵심적인 필드가 아니라고 예를 든것은 뭐냐면
         // 동기화에 사용하는 lock 을 비교했다.
-        // sychronized (new Object()){
+        // synchronized (new Object()){
         //
         // } new Object 해서 락으로 쓸만한 오브젝트를 새로만들수있다.
         // 또 이 락을 밖에다가 두고쓸수도있다.
@@ -55,7 +55,7 @@ public class Point {
         //이렇게 구현할수도잇다.
 
         //근데 이렇게 모든규약을 지키면서 equals 를 만드는게 쉽지않다.
-        //그래서 구글에서 autovalue 를 제공해준다.
+        //그래서 구글에서 autoValue 를 제공해준다.
         //근데 사용하는게 조금 까다롭다.
         Point p = (Point) o;
 

@@ -1,9 +1,6 @@
 package effective.java.item7.ch1.cache;
 
 import java.util.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class PostRepository {
 
@@ -19,7 +16,7 @@ public class PostRepository {
 
     /**
      * 여기서 나중에 왜 Map key 를 Integer 로 쓰지않고 CacheKey 라는 Object 를 따로만들어서
-     * 사용했는지는 나중에 알려주겠다. --> backgroundThread 때 createdate 쓸려고.
+     * 사용했는지는 나중에 알려주겠다. --> backgroundThread 때 createDate 쓸려고.
      */
 //    public Post getPostById(Integer id){
 //        CacheKey key = new CacheKey(id);

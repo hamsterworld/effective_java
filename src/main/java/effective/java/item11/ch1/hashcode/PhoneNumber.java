@@ -6,7 +6,6 @@ package effective.java.item11.ch1.hashcode;
  * 2. 두 객체에 대한 equals 가 같다면, hashcode 의 값도 같아야 한다.
  * 3. 두객체에 대한 equals 가 다르더라도, hashcode 의 값은 같을 수 있지만 해시테이블 성능을 고려해 다른값을 리턴하는 것이 좋다.
  *
- *
  * hashcode 를 구현할때 제약사항은?
  * 1. equals 구현할때 썻던 field 들을 모두 사용해야한다.
  * 2. equals 가 같다면 왜 hashcode 도 같아야하는가?

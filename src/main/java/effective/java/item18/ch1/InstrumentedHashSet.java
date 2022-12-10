@@ -34,7 +34,7 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
     // 그러면 우리는 그 상속받은 애들은 한번 전부 검토하거나 변경해야한다.
     // 캡슐화가 깨지게된다.
 
-    // 두번째
+    // 두번째,
     // 우리는 Override 를 해서 추가되는 모든것에 count 하기위해 상속했는데
     // 만약에 Set 에 새로운 add 기능이 추가됫다.
     // 그러면 우리가 이 기능이 추가된걸 알고 다시 Override 해서 count 기능을 넣을수있을까?

@@ -1,9 +1,9 @@
 package effective.java.item8.ch1.finalizer;
 
 /**
- * finalize와 cleaner는 사용하지마라.
+ * finalize 와 cleaner 는 사용하지마라.
  */
-public class FinalizerIsBad {
+public class Finalizer_Is_Bad {
 
     @Override
     protected void finalize() throws Throwable{

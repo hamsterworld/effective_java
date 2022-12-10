@@ -1,0 +1,19 @@
+우리는 자원을 반납해야된다. 그러면 왜?
+OS 를 다루다보면 알게되겠지만 한번에 열수있는 socket(file)들의 개수가 제한되어 있다.
+그래서 자원관리를 잘해줘야한다.
+자원 관리를 위해 finalizer 와 cleaner 를 그래서 사용했던건데 사실상 못쓴다.
+
+finalizer 와 cleaner 사용을 피해라.
+
+1. finalizer 와 cleaner 는 즉시 수행된다는 보장이 없다.
+2. 제때제때 실행이 안될수도있다.
+3. finalizer 동작중에 예외가 발생시 정리작업이 안될수도있다.
+4. finalizer 와 cleaner 는 성능 문제가 있다.
+5. finalizer 는 보안문제가 있다.
+
+기본적으로는 finalizer 에 접근을 못한다. public class 가 아니다.
+
+결론, 반납할 자원이 있는 class 의 경우
+AutoCloseable 을 구현한다음 클라이언트에서 close()를 호출하거나
+try-with-resource 를 사용하자.
+

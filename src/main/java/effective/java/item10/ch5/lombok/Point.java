@@ -21,7 +21,7 @@ import lombok.ToString;
  * 단점은 지저분하다.
  *
  * 주의점.
- * 1. equals 를 구현하면 반드시 hasgcode 를 재정의해야한다. item 11에서볼것이다.
+ * 1. equals 를 구현하면 반드시 hashcode 를 재정의해야한다. item 11에서볼것이다.
  * 2. Object 가 아닌 타입의 매개변수를 받은 equals 매서드를 선언하지말자 --> 이것은 오버라이딩이다.
  *
  */
