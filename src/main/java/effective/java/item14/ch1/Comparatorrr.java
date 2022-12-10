@@ -3,10 +3,11 @@ package effective.java.item14.ch1;
 import java.math.BigDecimal;
 
 /**
- * equals랑 성격은 비슷하지만
+ * equals 랑 성격은 비슷하지만
+ *
  * 다른점이라면 value class 같은 object 들의 순서를 비교할수있다.
  *
- * comparator를 통해 구현된 compara나 comparato매서드는 equals와달리 양수, 0 ,음수를 반환한다.
+ * comparator 를 통해 구현된 compara 나 comparato 매서드는 equals 와달리 양수, 0 ,음수를 반환한다.
  *
  * comparator 를 구현할때 어떠한 규약을 따라야하는지 알아보자.
  * 1.반사성
@@ -14,7 +15,7 @@ import java.math.BigDecimal;
 public class Comparatorrr{
 
     public static void main(String[] args) {
-        //BigDecimal은 대표적으로 Comparator를 구현하고있는 class 이다.
+        //BigDecimal 은 대표적으로 Comparator 를 구현하고있는 class 이다.
         BigDecimal n1 = BigDecimal.valueOf(344234888);
         BigDecimal n2 = BigDecimal.valueOf(36786785);
         BigDecimal n3 = BigDecimal.valueOf(897674333);

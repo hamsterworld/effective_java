@@ -3,22 +3,22 @@ package effective.java.item12;
 import java.util.Objects;
 
 /**
- * ToString을 구현안하면 그냥 hashcode값을 리턴하니까.
+ * ToString 을 구현안하면 그냥 hashcode 값을 리턴하니까.
  *
  * 그렇게 유용하지않다 그래서 구현해서 리턴하자라는 말이다~
  *
- * ToString으로 해서 문자열포멧을 반환하는 경우
- * ToString에대한 설명주석이 들어가있는것이 좋다.
+ * ToString 으로 해서 문자열포멧을 반환하는 경우
+ * ToString 에 대한 설명주석이 들어가있는것이 좋다.
  *
- * ToString은 어쨋든 외부에 정보를 공개하는것이므로,
+ * ToString 은 어쨋든 외부에 정보를 공개하는것이므로,
  * 공개하고싶은 정보만 공개하는게 더낫다고 생각한다.
  *
- * 그리고 ToString으로 애초에 공개한정보니까
- * 각각의 공개한 정보들에대한 Getter를 제공하라는 말이다.
+ * 그리고 ToString 으로 애초에 공개한정보니까
+ * 각각의 공개한 정보들에대한 Getter 를 제공하라는 말이다.
  *
- * lombok이나 자동생성 ToString의 경우 우리가원하는 문자열포멧이 불가능하다.
+ * lombok 이나 자동생성 ToString 의 경우 우리가원하는 문자열포멧이 불가능하다.
  *
- * 결론적으로는 ToString을 구성하면 of(공개된것만),get(공개된것만)을 구현해주는것을 권장한다.
+ * 결론적으로는 ToString 을 구성하면 of(공개된것만),get(공개된것만)을 구현해주는것을 권장한다.
  */
 public class ToString {
 

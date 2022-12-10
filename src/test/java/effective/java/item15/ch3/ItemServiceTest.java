@@ -23,9 +23,11 @@ class ItemServiceTest {
         ItemService service = new ItemService(memberService);
 
         assertNotNull(service);
-        assertNotNull(service.memberService); // ItemService 에서 memberService 가 private 일때 How? 할것인가
+        assertNotNull(service.memberService);
+
+        // ItemService 에서 memberService 가 private 일때 How? 할것인가
         // 1번방법. getter 를 만들어준다. test 하려는 대상이 이미 getter 를 제공하면 getter 를 써도된다.
-        // 2번방법. 차라리 package-private 로 구현한다. test 에서는 같은 package 이다! 맨위에 이름을 잘볼것.
+        // 2번방법. 차라리 package-private 로 구현한다. test 에서는 같은 package 이다! 맨위에 이름을 잘볼것. (지금 사용된 방법)
         // 3번방법. getter 를 package-private 로 구현한다. 정말로 뭔가 공개하기싫다면.
 
         /**

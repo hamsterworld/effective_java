@@ -37,11 +37,9 @@ public final class CaseInsensitiveString {
 
         return o instanceof CaseInsensitiveString &&
                 ((CaseInsensitiveString) o).s.equalsIgnoreCase(s);
-
     }
 
     //즉 다른타입을 지원하면안된다.
     //다른 타입을 지원하니까 대칭성이 깨져버린것이다.
-
 
 }

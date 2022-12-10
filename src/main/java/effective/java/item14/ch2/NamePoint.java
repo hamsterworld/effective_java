@@ -7,9 +7,9 @@ import java.util.TreeSet;
 //왜냐하면 이미 위에서 Comparable<Point>로 구현하고 있기 때문이다.
 
 //그럼 방법이없냐? 아니다 있다.
-//해당 자료구조에서 그냥 comparable을 구현하면되지만 추천하지않는다.
+//해당 자료구조에서 그냥 comparable 을 구현하면되지만 추천하지않는다.
 
-//equals마냥 Composition을 사용하는것.
+//equals 마냥 Composition 을 사용하는것.
 
 public class NamePoint extends Point{
 

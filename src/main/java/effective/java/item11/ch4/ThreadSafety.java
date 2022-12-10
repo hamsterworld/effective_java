@@ -15,7 +15,7 @@ public class ThreadSafety {
 
     @Override
     public int hashCode(){
-        //T1 , T2여기 들어온다하더라도 hashcode라는 공유데이터때메 뭔가 위험할것같다. 근데 이코드는 안전해보인다. --> 안전한 이유를 말해보라.
+        //T1 , T2여기 들어온다하더라도 hashcode 라는 공유데이터때메 뭔가 위험할것같다. 근데 이코드는 안전해보인다. --> 안전한 이유를 말해보라.
         int result = hashCode;
         if(hashCode == 0){
             //T1, T2가 동시에 들어올수있다.
@@ -27,9 +27,9 @@ public class ThreadSafety {
         return result;
     }
 
-    // synchronized method를 걸면 성능에 문제가 생기므로
+    // synchronized method 를 걸면 성능에 문제가 생기므로
 
-    // double checking locking을 걸어서 synchronized를 최소화한다.
+    // double checking locking 을 걸어서 synchronized 를 최소화한다.
 
 
     // 참고로 불변객체도 thread-safety 하다.

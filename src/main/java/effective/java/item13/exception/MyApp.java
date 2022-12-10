@@ -9,10 +9,10 @@ package effective.java.item13.exception;
  * 내가 라이브러리 사용할때를 생각해보자. Exception 이 날수잇는곳을 알수있다.
  * Client 한테 알려줄수있다. 명확한 장치
  *
- * nuCheckException 은 왜? Client 쪽에서 이예외가 발생하면 할수있는게없다.
+ * nuCheckException 은 왜? Client 쪽에서 이 예외가 발생하면 할수있는게없다.
  * 그래서 코드만 번잡하게 할빠에 그냥 아무것도 하지마라라고 해서 만든게 unChecked 의 의도인것같다.
  *
- * 즉, 선택의 기준은 Client 한테 복구할수있는 방법이 있는예외라면 checked 사용하는것이 낫다.
+ * 즉, 선택의 기준은 Client 한테 복구할수있는 방법이 있는 예외라면 checked 사용하는것이 낫다.
  * 무조건 unchecked 를 선호하는것을 지양하라.
  *
  */

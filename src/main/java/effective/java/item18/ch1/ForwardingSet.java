@@ -11,6 +11,7 @@ import java.util.Set;
  */
 public class ForwardingSet<E> implements Set<E> {
 
+    //Set 의 기능은 기능대로 사용하는 중이다.
     private final Set<E> s;
 
 

@@ -7,7 +7,7 @@ import java.util.Map;
  * clone 의 규약
  * 1. x.clone() != x 반드시 true
  * 2. x.clone().getClass() == x.getClass() 반드시 true
- * 3. x.clone().equals(x) true가 아닐수도있다.
+ * 3. x.clone().equals(x) true 가 아닐수도있다.
  *
  * 불변 객체라면 다음으로 충분하다. final class
  * cloneable 인터페이스를 구현하고

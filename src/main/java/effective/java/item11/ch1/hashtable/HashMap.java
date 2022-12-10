@@ -27,20 +27,20 @@ public class HashMap {
         System.out.println(s);
 
         // equals 가 같다면 hashcode 도 같아야한다는데 별문제가 없는것같다.
-        // phonenumber 는 value class이므로 같은 값이 들어가면 같다고 동작해야한다.
+        // phoneNumber 는 value class 이므로 같은 값이 들어가면 같다고 동작해야한다.
 
 
 //        String s1 = map.get(new PhoneNumber(123, 456, 7890));
 //        System.out.println(s1);
 
-        // 위에에서 문제가발생한다 null이 나온다.
-        // hashcode 가 달라서 null이 나온다.
+        // 위에에서 문제가발생한다 null 이 나온다.
+        // hashcode 가 달라서 null 이 나온다.
 
         // 이래도 잘 동작한다.
         // 근데 굳이 왜 hashcode 재설정해야하나?
         // hash collision 이 발생한다.
         // hashmap 을 쓰는 장점이 싹다 사라진다.
-        // o(1) -> o(n) 으로 변경된다. HashMap의 장점이 사라진다. (index 번호로 뽑아오기때문에 사실상 o(1)임)
+        // o(1) -> o(n) 으로 변경된다. HashMap 의 장점이 사라진다. (index 번호로 뽑아오기때문에 사실상 o(1)임)
         // hashcode 는 같으니까 그 LinkedList 에서 같은 equals 를 비교해버린다. 그리고 값을 꺼낸다.
         // 그냥 linkedList 를 쓰는것과 동일하게된다..
 

@@ -3,7 +3,7 @@ package effective.java.item17.ch3;
 import java.math.BigInteger;
 
 /**
- * BigInteger,BigDecimal 와같이 상속이 되는 class 들이 있다.
+ * BigInteger,BigDecimal 와 같이 상속이 되는 class 들이 있다.
  * 그리고 하위타입이 가변객체로 만들어졌을수도있다.
  * 그래서 우리가 파라미터로 BigInteger 로 받을때 하위타입이 들어올수있다.
  * 만약에 전달된 type 이 BigInteger 면 써도되지만 하위타입이라면?
