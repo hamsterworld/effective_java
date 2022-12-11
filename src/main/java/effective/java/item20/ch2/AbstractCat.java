@@ -6,4 +6,12 @@ public abstract class AbstractCat {
 
     protected abstract String name();
 
+    protected String hamster(){
+        return "hi";
+    }
+
+    static protected String hamster1(){
+        return "hi1";
+    }
+
 }
