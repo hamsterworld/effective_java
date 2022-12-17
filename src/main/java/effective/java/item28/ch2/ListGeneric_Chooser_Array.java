@@ -27,7 +27,6 @@ public class ListGeneric_Chooser_Array<T> {
         ListGeneric_Chooser_Array<Integer> chooser = new ListGeneric_Chooser_Array<>(intList);
 
         for(int i =0;i<10;i++){
-
             Integer choice = chooser.choose();
             System.out.println(choice);
         }
