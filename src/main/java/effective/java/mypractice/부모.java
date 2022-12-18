@@ -35,7 +35,10 @@ public class 부모<E,V> {
 
 //        자식 자식1 = new 자식();
 //        부모 부모1 = 자식1;
+//        System.out.println("====");
 //        부모1.method();
+//        자식1.method();
+//        System.out.println("====");
 //        부모1.cast(new 자식());
 //        부모1.cast(new Object());
 
@@ -45,11 +48,15 @@ public class 부모<E,V> {
          * downCasting 은 애초에 그자체를 downCasting 은 불가능하다.
          * upCasting 해놧던걸 downCasting 은 가능하다.
          */
-//        부모 부모 = new 자식();
-//        자식 자식 = (자식) 부모;
-//
-//        자식.method1();
-//        자식.method();
+        부모 부모 = new 자식();
+        자식 자식 = (자식) 부모;
+
+        부모.method();
+        ((자식) 부모).method1();
+        자식.method1();
+
+        자식.method1();
+        자식.method();
 
         // 애초에 부모 자체를 downCasting 할수없다.
 //        부모 부모1 = new 부모();

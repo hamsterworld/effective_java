@@ -8,6 +8,7 @@ package effective.java.item31.ch3;
 
 import effective.java.item31.ch2.exmaple.Box;
 import effective.java.item31.ch2.exmaple.IntegerBox;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.List;
@@ -57,5 +58,6 @@ public class Swap {
         Box<?> myBox = new IntegerBox(10,"keesun");
 //        myBox.change(100);
         myBox.change(null);
+
     }
 }
