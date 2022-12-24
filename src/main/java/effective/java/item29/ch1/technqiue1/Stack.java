@@ -17,7 +17,6 @@ public class Stack<E> {
     @SuppressWarnings("unchecked") // SuppressWarnings 를 사용한 근거가 된다.
     public Stack() {
         Object[] objects = new Object[DEFAULT_INITIAL_CAPACITY];
-        objects[1] = 1;
         elements = (E[]) objects;
         // Generic 배열은 못만든다! 그래서 어쩔수없이 형변환
         // elements = new E[DEFAULT_INITIAL_CAPACITY];

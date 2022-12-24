@@ -23,7 +23,8 @@ public class Chooser_Array {
         List<Integer> intList = List.of(1, 2, 3, 4, 5, 6);
         List<String> stringList = List.of("h", "asd", "34", "fde", "feg1", "ff2");
 
-        Chooser_Array chooser = new Chooser_Array(intList);
+//        Chooser_Array chooser = new Chooser_Array(intList);
+        Chooser_Array chooser = new Chooser_Array(stringList);
 
         for(int i =0;i<10;i++){
             // 배열이 가지고 있는 문제이다.

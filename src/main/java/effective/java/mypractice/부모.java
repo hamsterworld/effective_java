@@ -48,20 +48,20 @@ public class 부모<E,V> {
          * downCasting 은 애초에 그자체를 downCasting 은 불가능하다.
          * upCasting 해놧던걸 downCasting 은 가능하다.
          */
-        부모 부모 = new 자식();
-        자식 자식 = (자식) 부모;
-
-        부모.method();
-        ((자식) 부모).method1();
-        자식.method1();
-
-        자식.method1();
-        자식.method();
+//        부모 부모 = new 자식();
+//        자식 자식 = (자식) 부모;
+//
+//        부모.method();
+//        ((자식) 부모).method1();
+//        자식.method1();
+//
+//        자식.method1();
+//        자식.method();
 
         // 애초에 부모 자체를 downCasting 할수없다.
-//        부모 부모1 = new 부모();
+        부모 부모1 = new 부모();
 //        자식 자식1 = (자식) 부모1;
-//
+        부모1.method();
 //        자식1.method1();
 //        자식1.method();
 
@@ -82,8 +82,8 @@ public class 부모<E,V> {
         /**
          * 이게 바로 문제다.
          */
-        부모<Integer, String> objectObject부모 = new 부모<>();
-        objectObject부모.setElements();
-        String elements1 = objectObject부모.getElements();
+//        부모<Integer, String> objectObject부모 = new 부모<>();
+//        objectObject부모.setElements();
+//        String elements1 = objectObject부모.getElements();
     }
 }
