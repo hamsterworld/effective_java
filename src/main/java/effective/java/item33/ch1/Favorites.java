@@ -20,8 +20,8 @@ import java.util.Objects;
  *
  */
 public class Favorites {
-    //Class 는 제네릭클래스이다.
 
+    //Class 는 제네릭클래스이다.
     private Map<Class<?>, Object> map = new HashMap<>();
 
     // 들어갈때 검사.
@@ -38,10 +38,10 @@ public class Favorites {
         Favorites favorites = new Favorites();
         favorites.put(String.class, "keesun");
         // 아래처럼 Class Raw 타입으로하면 깨뜨릴수있다.
-//        favorites.put((Class)String.class, 1);
-//        Integer integer = favorites.get(Integer.class);
+        favorites.put((Class)String.class, 1);
+        Integer integer = favorites.get(Integer.class);
 //        favorites.put(String.class,1);
-//        favorites.put(Integer.class, 2);
+        favorites.put(Integer.class, 2);
 
         // 타입을 가지고잇는 class type 은불가능
         // List.class 만 가능

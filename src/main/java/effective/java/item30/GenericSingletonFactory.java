@@ -17,6 +17,11 @@ public class GenericSingletonFactory {
         return t -> t;
     }
 
+    public static <E> Function<E,E> hamster(){
+        return t -> t;
+    }
+
+
     public static void main(String[] args) {
         String[] strings = {"삼베","대마","나일론"};
         Function<String, String> stringFunction = stringIdentityFunction();
@@ -29,6 +34,9 @@ public class GenericSingletonFactory {
         for (Number number : numbers) {
             System.out.println(numberFunction.apply(number));
         }
+
+        Function<Integer,Integer> s = hamster();
+
     }
 
 }

@@ -12,7 +12,6 @@ import java.util.List;
 public class RecursiveTypeBound {
 
     // static method 는 거이 generic method 에서만 사용되는듯?
-    // static 에서 PECS 는 개인적으로 필요가 없다고 생각한다.
     public static <E extends Comparable<? super E>> E max(List<E> list) {
         if (list.isEmpty()){
             throw new IllegalArgumentException("빈 리스트");

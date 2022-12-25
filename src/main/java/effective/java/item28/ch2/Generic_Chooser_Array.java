@@ -21,6 +21,7 @@ public class Generic_Chooser_Array<T> {
         // 그러나 우리는 안다 이게 보장된다는것을.
         // 당연히 Collection<T> 해가지고 오면 당연히 T 에관한 element 를 array 에 넣겟지. 내가 보장할수있다는것.
         // 그래서 suppressWarnings 를 쓰는것.
+//        Object[] objects = choiceList.toArray();
         this.choiceList = (T[]) choiceList.toArray();
     }
 
