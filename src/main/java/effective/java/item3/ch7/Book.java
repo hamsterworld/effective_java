@@ -17,9 +17,9 @@ import java.time.LocalDate;
  *   Object -> json
  *   json -> Object
  *   어쨋든 이런 모든과정이 메시지를 전달하는과정이다.
- *   그러나 이것을 받는곳이 JVM이라면 객체직렬화도 충분히 좋다.
- *   그러나 받는곳이 JVM이 아니라면 바이트코드시스템을 읽지못하므로 의미가없다.
- *   그래서 XML이나 Json형식이 많이쓰인다고 생각한다.
+ *   그러나 이것을 받는곳이 JVM 이라면 객체직렬화도 충분히 좋다.
+ *   그러나 받는곳이 JVM 이 아니라면 바이트코드시스템을 읽지못하므로 의미가없다.
+ *   그래서 XML 이나 Json 형식이 많이쓰인다고 생각한다.
  *
  */
 public class Book implements Serializable {

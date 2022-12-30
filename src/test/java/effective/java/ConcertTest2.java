@@ -1,11 +1,8 @@
 package effective.java;
 
-import effective.java.item3.ch1.Concert;
 import effective.java.item3.ch1.Concert2;
-import effective.java.item3.ch1.Elvis;
 import effective.java.item3.ch1.IElvisImpl;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

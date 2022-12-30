@@ -32,7 +32,7 @@ public class Concert {
 
     private boolean mainStateOpen;
 
-    private Elvis elvis;
+    private final Elvis elvis;
 
     public Concert(Elvis elvis){
         this.elvis = elvis;

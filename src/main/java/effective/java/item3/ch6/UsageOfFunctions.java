@@ -38,8 +38,9 @@ public class UsageOfFunctions {
         Function<Integer,String> intToString = (i) -> "hello";
         Function<Integer,String> intToString1 = Objects::toString;
 
-        Supplier<Integer> integerSupplier;
+        Supplier<Person2> integerSupplier = () -> new Person2();
         Supplier<Person2> Person2Supplier = Person2::new; //아무것도없는 생성자를 사용한다.
+        Function<LocalDate,Person2> Person2Supplier1 = (t) -> new Person2(t);
         Function<LocalDate,Person2> Person2Supplier2 = Person2::new; //Local을 받는 생성자를 사용한다.
 
         Consumer<Integer> integerConsumer = System.out::println; //받긴하지만 return은 없다.
