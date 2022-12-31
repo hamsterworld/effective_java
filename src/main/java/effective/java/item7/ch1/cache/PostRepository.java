@@ -6,13 +6,13 @@ public class PostRepository {
 
     private Map<CacheKey,Post> cache;
 
-    public PostRepository(){
-        this.cache = new HashMap<>();
-    }
-
 //    public PostRepository(){
-//        this.cache = new WeakHashMap<>();
+//        this.cache = new HashMap<>();
 //    }
+
+    public PostRepository(){
+        this.cache = new WeakHashMap<>();
+    }
 
     /**
      * 여기서 나중에 왜 Map key 를 Integer 로 쓰지않고 CacheKey 라는 Object 를 따로만들어서

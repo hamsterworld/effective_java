@@ -3,7 +3,7 @@ package effective.java.item6.ch4;
 import java.util.regex.Pattern;
 
 /**
- * 정규식을 공부하기보다는, Java에서 정규식이 어디에 쓰이는가를 중점적으로..
+ * 정규식을 공부하기보다는, Java 에서 정규식이 어디에 쓰이는가를 중점적으로..
  */
 public class RegularExpression {
 
@@ -17,8 +17,8 @@ public class RegularExpression {
             name.split(","); //한두개정도는 미리 complie하는거랑은 크게차이가없다.
             SPLIT_PATTERN.matcher(name).matches();
             /**
-             * matche,split,replaceall,replacefirst
-             * 아마 arg에 regex잇는거면 의심해볼만한듯듯
+             * matches,split,replaceAll,replaceFirst
+             * 아마 arg 에 regex 잇는거면 의심해볼만한듯듯
              * */
 //            String name3 = "keesun,,,,whiteship";
 //            name3.split(",,,"); //이런경우는 이야기가달라진다.

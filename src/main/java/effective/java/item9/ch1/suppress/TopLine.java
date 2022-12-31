@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
  * finally 가 안좋은이유 Exception 을 먹어버린다.
  * 내가 badBuffer 를 새로 오버라이딩해서
- * readline 과 close 에서 분명히 exception 이 터지는데
+ * readLine 과 close 에서 분명히 exception 이 터지는데
  * 누가 나올까?
  * close 에서 터진게나온다 맨마지막에 터진것만나온다.
  * 근데 디버깅할때 가장중요한건 가장먼저 터진 exception 을 보는게 중요하다.
