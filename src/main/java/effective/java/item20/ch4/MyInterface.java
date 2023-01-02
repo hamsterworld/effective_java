@@ -17,6 +17,8 @@ package effective.java.item20.ch4;
 // 2. 더 specific interface 가 이겨야한다.
 // 그래서 이와같은경우는 1처럼 class 것을 따라야하는지 interface 를 따라야하는지 혼란이 온다.
 
+// default method 도 class 에서 오버라이딩 가능하다. class 가 무조건 이긴다.
+// 구체적인 interface 가 이긴다 subinterface 에서 overriding 한 default method 가 이긴다.
 public interface MyInterface {
 
 //    default String toString(){

@@ -23,11 +23,15 @@ package effective.java.item21.ch1;
  *  우리가 만든 라이브러리야 뭐 어떤 default 가 추가됬고
  *  어떻게 Overriding 하는지 알지만
  *  3rd party 입장에서는 그게 쉽지않다.
- *
+ * https://commons.apache.org/proper/commons-collections/javadocs/api-3.2.2/index.html
+ * https://commons.apache.org/proper/commons-collections/javadocs/api-4.4/index.html
+ * SYNCHRONIZEDCOLLECTION 한번 볼것
+ * removeif 를 다시구현하고있다.
  */
 public interface MakerInterface {
 
     default void hello(){
         System.out.println("hello interface");
     }
+
 }

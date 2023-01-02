@@ -84,6 +84,8 @@ public class Person2 {
         Function<LocalDate,Person2> aNew = Person2::new;
         dates.stream().map(aNew).collect(Collectors.toList());
 
+
+
         //만약에 Person2에 생성자가 하나더있다고 가정해보면
         //Person2::new에서 원하는 생성자 참조를 하고싶을때 어떤식으로하면 원하는 생성자를 사용할수있을까.
 

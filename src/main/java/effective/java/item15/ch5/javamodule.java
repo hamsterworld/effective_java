@@ -6,4 +6,8 @@ package effective.java.item15.ch5;
  *
  */
 public class javamodule {
+
+    public static void main(String[] args) {
+
+    }
 }

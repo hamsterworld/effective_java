@@ -1,6 +1,11 @@
 package effective.java.item21.ch1;
 
-public class SubClass extends SuperClass implements MakerInterface{
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.SynchronousQueue;
+
+public class SubClass extends SuperClass implements MakerInterface {
     public static void main(String[] args) {
         SubClass subClass = new SubClass();
         subClass.hello(); // -> 어떤 default 를 호출할까?
@@ -11,5 +16,15 @@ public class SubClass extends SuperClass implements MakerInterface{
         // 사실상 버그다.
         // 이것이 default method 가 runtime 중에 발생하는 에러다.
         // 개발자는 항상 compile error 를 선호해야한다.
+
+        SynchronousQueue<Object> objects = new SynchronousQueue<>();
+        objects.
+        objects.removeIf();
     }
+
+    @Override
+    public void hello() {
+        System.out.println("");
+    }
+
 }

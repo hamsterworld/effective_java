@@ -17,7 +17,7 @@ package effective.java.item15.ch2.member;
  */
 class DefaultMemberService implements MemberService {
 
-    MemberRepository memberRepository;
+    MemberRepository memberRepository = new MemberRepository();
 
     private String name;
 
@@ -50,4 +50,9 @@ class DefaultMemberService implements MemberService {
 //            return name;
 //        };
 //    }
+
+    public static void main(String[] args) {
+        DefaultMemberService defaultMemberService = new DefaultMemberService();
+        defaultMemberService.getMember();
+    }
 }

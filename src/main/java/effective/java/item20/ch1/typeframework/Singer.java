@@ -23,7 +23,7 @@ package effective.java.item20.ch1.typeframework;
  *
  *
  * + 추가적으로 한가지 더 장점 (item 18 참조)
- * wrapper class 에서 사용하면 interface 는 기능을 향상(확장?)시키는 강력한 수단이 된다.
+ *  wrapper class 에서 사용하면 interface 는 기능을 향상(확장?)시키는 강력한 수단이 된다.
  * 그래서 wrapper 와 interface 를 사용하는것은 굉장히 안전하게 기능을 확장시킬수있는
  * 수단이 된다.
  *

@@ -22,8 +22,8 @@ public class privatePoint {
         this.y = y;
     }
 
-    //물론 set 은 만들기 권장하지않는다.
-    //어쨋든 private field 를 설정하면 좀더 캡슐화를 더잘할수있다.
+    // 물론 set 은 만들기 권장하지않는다.
+    // 어쨋든 private field 를 설정하면 좀더 캡슐화를 더잘할수있다.
 
     /**
      * package-private 면 우리만 사용하는거거나 우리회사만 쓰는거기때문에

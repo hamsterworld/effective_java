@@ -26,9 +26,9 @@ public final class Person {
         Person person = new Person(address1);
         Address address2 = person.getAddress();
         address2.setCity("hamster2");
-        //물론 person 에 있는것이 추이적으로 변경된거긴하지만
-        //어쨋든 address 가 가변적이여서 변경되었다.
-        //이런것들을 그래서 막아야아한다. => 방어적 복사하라.
+        // 물론 person 에 있는것이 추이적으로 변경된거긴하지만
+        // 어쨋든 address 가 가변적이여서 변경되었다.
+        // 이런것들을 그래서 막아야아한다. => 방어적 복사하라.
 
     }
 
