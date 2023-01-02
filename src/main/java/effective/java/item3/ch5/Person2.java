@@ -9,7 +9,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
- *  이번엔 static한 매서드참조가 아닐때.
+ *  이번엔 static 한 매서드참조가 아닐때.
  */
 public class Person2 {
 
@@ -71,7 +71,7 @@ public class Person2 {
             System.out.println(p.getAge());
         });
 
-        /** new에서도 가능하다.
+        /** new 에서도 가능하다.
          * 결국 매서드참조는 하나의 매서드만 사용하는 람다식이므로.
          */
         ArrayList<LocalDate> dates = new ArrayList<>();

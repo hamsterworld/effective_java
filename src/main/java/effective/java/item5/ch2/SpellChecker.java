@@ -41,7 +41,6 @@ public class SpellChecker {
      * 나라면 근데 직접자원을 주입받는 방식이 제일 나은것같다.
      * factory 를 이렇게 내부에서 받아서할수있다는점도생각해두면 좋은것같다.
      */
-
     public void isValid(String test) {
         dictionary.contains(test);
     }

@@ -7,8 +7,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ListGeneric_Chooser_Array<T> {
-    // Integer[],String[] 이런건 아마 문제가 안될거다.
-    // 그러나 Object[] 이런것들은 문제가 될거다. 근데 외부에서 여러가지 타입을 받아서 재사용하고싶다. 그래서 Object[]를 썻다고해보자.
+
     private final List<T> choiceList;
 
     public ListGeneric_Chooser_Array(Collection<T> choiceList) {

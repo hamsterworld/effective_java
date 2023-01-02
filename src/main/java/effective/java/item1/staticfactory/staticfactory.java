@@ -1,7 +1,9 @@
 package effective.java.item1.staticfactory;
 
 import effective.java.item1.staticfactory.GoodPoint345.HelloServiceInterface;
+import effective.java.item1.staticfactory.GoodPoint345.KoreanHelloService;
 
+import java.util.EnumSet;
 import java.util.Optional;
 import java.util.ServiceLoader;
 
@@ -26,6 +28,9 @@ public class staticfactory {
 //        helloServiceInterfaceOptional.ifPresent(h->{
 //            System.out.println(h.hello());
 //        });
+
+        HelloServiceInterface ko = HelloServiceInterface.of("ko");
+
 
     }
 }

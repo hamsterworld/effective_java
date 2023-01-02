@@ -6,8 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Generic_Chooser_Array<T> {
 
-    // Integer[],String[] 이런건 아마 문제가 안될거다.
-    // 그러나 Object[] 이런것들은 문제가 될거다. 근데 외부에서 여러가지 타입을 받아서 재사용하고싶다. 그래서 Object[]를 썻다고해보자.
+
     private final T[] choiceList;
 
     @SuppressWarnings("unchekced")
@@ -19,8 +18,10 @@ public class Generic_Chooser_Array<T> {
         // list.add("안녕"); 하면 타입보장을 해줬다.
         // 그러나 이런경우에는 Object[] 로 반환되고 T[] 로 다시하는데
         // 안에있는 Object element 들이 T 와 호환되는지 컴파일단계에서는 보장을 해줄수가없다.
-        // 그러나 우리는 안다 이게 보장된다는것을. 왜냐 아니 Collection<T> 해가지고 오면 당연히 T 에관한 element 를 array 에 넣겟지. 내가 보장할수있다는것.
+        // 그러나 우리는 안다 이게 보장된다는것을.
+        // 당연히 Collection<T> 해가지고 오면 당연히 T 에관한 element 를 array 에 넣겟지. 내가 보장할수있다는것.
         // 그래서 suppressWarnings 를 쓰는것.
+//        Object[] objects = choiceList.toArray();
         this.choiceList = (T[]) choiceList.toArray();
     }
 
@@ -37,8 +38,6 @@ public class Generic_Chooser_Array<T> {
         Generic_Chooser_Array chooser_array = new Generic_Chooser_Array<>(stringList);
 
         for(int i =0;i<10;i++){
-            // 배열이 가지고 있는 문제이다.
-            // Object 를 String 으로 넘겻는데 Client 에서 Number 로 캐스팅 한다면 문제가 생길거다.
             Integer choice = chooser.choose();
             Integer choose = (Integer)chooser_array.choose();
             System.out.println(choose);

@@ -44,6 +44,7 @@ public class Stack {
         for (String arg : List.of("a", "b", "c"))
             stack.push(arg);
         while (!stack.isEmpty())
-            System.out.println(((String)stack.pop()).toUpperCase());
+            System.out.println((Integer) stack.pop());
+//            System.out.println(((Integer)stack.pop()).toUpperCase());
     }
 }

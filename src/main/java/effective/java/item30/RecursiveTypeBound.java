@@ -19,7 +19,6 @@ public class RecursiveTypeBound {
         if(c.isEmpty()){
             throw new IllegalArgumentException("컬렉션이 비어 있습니다.");
         }
-
         E result = null;
         for (E e : c) {
             if(result == null || e.compareTo(result) > 0){

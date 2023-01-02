@@ -9,7 +9,7 @@ public class SpellCheckerTest {
 //        Dictionary dictionary = DictionaryFactory.get("default");
 //        SpellChecker spellChecker = new SpellChecker(dictionary);
 
-        //이렇게하면 supplier 가 factory를 완벽히 대체하게된다.
+        //이렇게하면 supplier 가 factory 를 완벽히 대체하게된다.
         SpellChecker spellChecker = new SpellChecker(() -> {
             //이것저것 처리
             return new DefaultDictionary();

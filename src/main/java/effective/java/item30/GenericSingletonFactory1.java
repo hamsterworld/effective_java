@@ -6,15 +6,20 @@ import java.util.function.UnaryOperator;
 // 제네릭 싱글톤 팩토리 패턴
 public class GenericSingletonFactory1 {
 
-    // 싱글톤
+//     싱글톤
     private static UnaryOperator<Object> IDENTITY_FN = t -> t;
 
-    // 제네릭이용
 
-    @SuppressWarnings("unchecked")
+        @SuppressWarnings("unchecked")
     public static <T> UnaryOperator<T> identityFunction(){
         return (UnaryOperator<T>) IDENTITY_FN;
     }
+
+    // 제네릭이용
+//    @SuppressWarnings("unchecked")
+//    public static <T> UnaryOperator<T> identityFunction(){
+//        return t-> t;
+//    }
 
     //제네릭+싱글톤 패턴이된다.
     public static void main(String[] args) {

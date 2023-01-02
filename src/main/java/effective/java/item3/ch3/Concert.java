@@ -10,7 +10,7 @@ public class Concert {
         singer.sing();
     }
 
-    //Supplier를 만족하면 사용할수있다.
+    // Supplier 를 만족하면 사용할수있다.
 
     public static void main(String[] args) {
         Concert concert = new Concert();

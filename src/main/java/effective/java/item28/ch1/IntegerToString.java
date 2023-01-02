@@ -16,17 +16,22 @@ public class IntegerToString {
         // 그러므로 다형성이 되므로 Object[] 이런것이 가능하다.
         // 즉, Array 는 공변이다.
         Object[] anything = new String[10];
-        anything[0] = 1; // 잘못된 코딩이다. 컴파일러가 못잡음 왜냐 array 는 공변이므로.
+        anything[0] = 1;
+        // 잘못된 코딩이다. anything 의 실체는 String[] 이다.
+        // 근데 이걸 컴파일러가 못잡는다. 버그다.
 
         // List 는 불공변
-        ArrayList<String> names = new ArrayList<>();
-//        ArrayList<Object> objects = names;
+        List<String> names = new ArrayList<>();
+        // List<Object> objects = names;
+        // 위 둘은 List<String> 와 List<Object> 는 그냥 다른타입이다. 서로 변화하거나 그런게없다.
+        // 이래서 List 는 불공변이라는것이다.
         // generic 은 이렇게 컴파일단계에서 명시되있지만
         // 나중에 소거된다.
 
         // 아래 코드가 실체화되지않고 제네릭은 소멸된다.
-        // 완전히 삭제되는건 아니다.
-        ArrayList<String> names1 = new ArrayList<>();
+        // String[] 이라고쓰면 String 배열이지만
+        // List<String> 이라고한다고 List 가 String Type 전용 그런게아니다. 사라진다. (하위 버전 호환성 때문에)
+        List<String> names1 = new ArrayList<>();
         names1.add("keesun");
         String name = names1.get(0);
         System.out.println(name);
@@ -39,8 +44,12 @@ public class IntegerToString {
         String name1 = (String)o;
         System.out.println(name1);
 
-        //그래서 재네릭과 배열을 같이 사용하지 않는다.
-//        ArrayList<String>[] arrayLists = new ArrayList<String>[10];
+        // 그래서 재네릭과 배열을 같이 사용하지 않는다.
+//        List<String>[] Lists = new ArrayList<String>[10];
+//        List<Integer> integerList = List.of(42);
+//        Object[] objects = Lists;
+//        objects[0] = integerList;
+//        String s = Lists[0].get(0);
 
     }
 }

@@ -24,7 +24,7 @@ public class NutritionFacts1 {
         private int sodium = 0;       //선택
         private int carbohydrate = 0; //선택
 
-        //Validation이 필요하다 원시타입으로 받으므로.
+        //Validation 이 필요하다 원시타입으로 받으므로.
         public Builder(int servingSize,int servings){
             this.servingSize = servingSize;
             this.servings = servings;
@@ -57,7 +57,7 @@ public class NutritionFacts1 {
 
         private void validateServing(int servingSize,int servings){
             if(servingSize < 0 || servings < 0){
-                throw new IllegalArgumentException("servingSize, servings는 음수가 될수 없습니다.");
+                throw new IllegalArgumentException("servingSize, servings 는 음수가 될수 없습니다.");
             }
         }
 
@@ -89,6 +89,11 @@ public class NutritionFacts1 {
         this.sodium = builder.sodium;
         this.carbohydrate = builder.carbohydrate;
         this.calories = builder.calories;
+
+    }
+
+    public static void main(String[] args) {
+        NutritionFacts1 bulide1 = new Builder(1, 1).calories(1).sodium(1).bulide();
 
     }
 

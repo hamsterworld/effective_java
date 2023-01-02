@@ -1,5 +1,8 @@
 package effective.java.item1.staticfactory.GoodPoint1;
 
+/**
+ * 1. 이름을 가질 수 있다.
+ */
 public class Order {
 
     private boolean prime;
@@ -26,7 +29,7 @@ public class Order {
      *  위에꺼는 일반 주문
      *  밑에꺼는 긴급 주문
      *  하지만 자바의 오버로딩은 변수타입까지만 보기때문에
-     *  위에 2개의 생성자는 하나의 class에서는 생성될수가없다.
+     *  위에 2개의 생성자는 하나의 class 에서는 생성될수가없다.
      *  세번째처럼은 되지만 저것은 고려대상이 아니다.
      *  그러면 어떻게?!
      *  그래서 책에서는 정적팩토리매서드로 표현하자라고 되어있다.

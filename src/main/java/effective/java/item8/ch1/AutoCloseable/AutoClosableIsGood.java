@@ -6,7 +6,7 @@ public class AutoClosableIsGood implements AutoCloseable{
 
     private BufferedInputStream inputStream;
 
-    //Override해서 정리할거 정리하고 하면 된다.
+    //Override 해서 정리할거 정리하고 하면 된다.
     @Override
     public void close() throws Exception {
         try{
