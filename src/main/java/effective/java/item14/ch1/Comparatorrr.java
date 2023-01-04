@@ -10,7 +10,6 @@ import java.math.BigDecimal;
  * comparator 를 통해 구현된 compara 나 comparato 매서드는 equals 와달리 양수, 0 ,음수를 반환한다.
  *
  * comparator 를 구현할때 어떠한 규약을 따라야하는지 알아보자.
- * 1.반사성
  */
 public class Comparatorrr{
 
@@ -38,13 +37,13 @@ public class Comparatorrr{
         System.out.println(n4.compareTo(n1));
         System.out.println(n2.compareTo(n1));
 
-        //이건 지키면 좋고 안지켜도 되고. comparaTo 가 0이면 equals도 0이여야한다.
+        //이건 지키면 좋고 안지켜도 되고. compareTo 가 0이면 equals 도 true 여야 한다.
         //안지켜지는 대표적인 예시
         BigDecimal oneZero = new BigDecimal("1.0");
         BigDecimal oneZeroZero = new BigDecimal("1.00");
-        System.out.println(oneZero.compareTo(oneZeroZero)); //Tree , TreeMap은 CompareTo를 비교해서 값을 넣는다. 그래서 Collection중에서
-        //ComparaTo를 이용해 값을 넣는애들은 위에가 안들어간다.
-        System.out.println(oneZero.equals(oneZeroZero)); //순서가없는 컬렉션은 equals를 사용하기때문에 애네는 둘다 들어간다.
+        System.out.println(oneZero.compareTo(oneZeroZero)); //Tree , TreeMap 은 CompareTo를 비교해서 값을 넣는다. 그래서 Collection 중에서
+        //CompareTo를 이용해 값을 넣는애들은 위에가 안들어간다.
+        System.out.println(oneZero.equals(oneZeroZero)); //순서가없는 컬렉션은 equals 를 사용하기때문에 애네는 둘다 들어간다.
         //그래서만약에 위 규약이 지켜지지않으면 문서화를 해두는것을 권장하고있다.
 
 

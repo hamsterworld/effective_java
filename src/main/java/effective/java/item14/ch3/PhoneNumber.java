@@ -79,8 +79,8 @@ public class PhoneNumber implements Comparable<PhoneNumber>{
     //그다음부터는 Comparator 가들고있는 method 를 method chaning 통해 그다음은 이거비교하고 그다음은이거비교하고
     //체이닝을 할수있다.
 
-    //위에처럼 쓴다면 안에 구현된 기본적인 natural order를 사용하겠다라는거고
-    //만약에 다른 order를 넣고싶다면 따로 넣어줘야한다.
+    //위에처럼 쓴다면 안에 구현된 기본적인 natural order 를 사용하겠다라는거고
+    //만약에 다른 order 를 넣고싶다면 따로 넣어줘야한다.
 
     public int getAreaCode() {
         return areaCode;

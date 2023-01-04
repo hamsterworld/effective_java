@@ -38,8 +38,9 @@ public class PhoneNumber {
 
         PhoneNumber that = (PhoneNumber) o;
 
-        if (areaCode != that.areaCode)
+        if (areaCode != that.areaCode){
             return false;
+        }
         if (prefix != that.prefix)
             return false;
         return lineNum == that.lineNum;
@@ -47,24 +48,24 @@ public class PhoneNumber {
 
 //    @Override
 //    public int hashCode() {
-//        //primitive type을 hashcode로 만들때
+//        //primitive type 을 hashcode 로 만들때
 //        int result = Integer.hashCode(areaCode);
 //        result = 31 * result + Integer.hashCode(prefix);
 //        result = 31 * result + Integer.hashCode(lineNum);
 //
-//        //reference type을 hashcode로 만들때
+//        //reference type 을 hashcode 로 만들때
 //        int i = point.hashCode(); //이렇게 호출해서 값을 구한다.
 //
-//        //Collections를 hashcode로 만들때는
+//        //Collections 를 hashcode 로 만들때는
 ////        int i1 = Arrays.hashCode();
 //        return result;
 //    }
-    // 위와같은 방법이 전형적인 hashcode를 구하는 방법이다.
+    // 위와같은 방법이 전형적인 hashcode 를 구하는 방법이다.
     // 왜 31이냐?
     // 일단 홀수를 써야한다.
     // 홀수중 왜 31이냐?
-    // 연구결과로 collision이 제일 적엇던게 31이다.
-    // hashcode의 핵심은 골고루 만드는것이다.
+    // 연구결과로 collision 이 제일 적엇던게 31이다.
+    // hashcode 의 핵심은 골고루 만드는것이다.
 
     //사실 이대로만 써도 충분하긴하다.
 
@@ -73,7 +74,7 @@ public class PhoneNumber {
     // 필요하면
     private int hashCode; //자동으로 0으로 초기화
     //캐싱도 된다. but 스레드 안전성을 신경써야한다.
-    //즉, 이 hashCode 안에 thread가 2개가 들어가서 막계산하다가 변경될수도있다.
+    //즉, 이 hashCode 안에 thread 가 2개가 들어가서 막계산하다가 변경될수도있다.
 
     @Override
     public int hashCode(){
@@ -87,6 +88,6 @@ public class PhoneNumber {
         return result;
     }
 
-    //계산할때 equals에 쓰는 필드빼지마라.
+    //계산할때 equals 에 쓰는 필드빼지마라.
 
 }

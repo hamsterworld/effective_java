@@ -56,6 +56,8 @@ public class Swap {
         // 너가 원하는 int 를 넘길지를 보장을 못한다.
         // 오로지 null 만 허용한다.
         Box<?> myBox = new IntegerBox(10,"keesun");
+//        myBox = new Box<>("안녕");
+//        myBox.change("안녕2");
 //        Box<Integer> myBox = new IntegerBox(10,"keesun");
 //        myBox.change(100);
         myBox.change(null);

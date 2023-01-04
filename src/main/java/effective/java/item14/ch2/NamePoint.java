@@ -1,6 +1,5 @@
 package effective.java.item14.ch2;
 
-import javax.naming.Name;
 import java.util.TreeSet;
 
 //여기서 Comparable<NamePoint> 구현이 안된다

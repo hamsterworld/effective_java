@@ -11,10 +11,10 @@ public class test extends ItemService {
     }
 
     public static void main(String[] args) {
-        test test = new test(t);
-        int saleRate1 = test.saleRate;
-
-        ItemService itemService = new ItemService();
-        itemService.saleRate;
+//        test test = new test(t);
+//        int saleRate1 = test.saleRate;
+//
+//        ItemService itemService = new ItemService();
+//        itemService.saleRate;
     }
 }

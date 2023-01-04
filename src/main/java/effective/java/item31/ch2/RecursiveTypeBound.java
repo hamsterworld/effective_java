@@ -71,5 +71,7 @@ public class RecursiveTypeBound {
 
         // 개인적으로 여전히 <? extends E> 는 필요가 없는듯.
 
+
+
     }
 }

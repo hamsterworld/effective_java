@@ -26,7 +26,7 @@ public class GenericBasic {
         // 로타입의 문제 ClassCastException 문제
         // 이제 제네릭으로 등장으로 이런걱정이 없어졋다.
         for (Object number : numbers) {
-            System.out.println((Integer)number);
+            System.out.println(number);
         }
 
         // Generic 등장!

@@ -55,7 +55,6 @@ public class Person2 {
         /**
          *  3.세번째로 임의객체로 해줄수도있다!
          */
-
 //        public int compareByAge(Person2 b){
 //            return this.birthday.compareTo(b.birthday);
 //        }
@@ -83,7 +82,6 @@ public class Person2 {
         //위에껄 한번더 풀어보면
         Function<LocalDate,Person2> aNew = Person2::new;
         dates.stream().map(aNew).collect(Collectors.toList());
-
 
 
         //만약에 Person2에 생성자가 하나더있다고 가정해보면

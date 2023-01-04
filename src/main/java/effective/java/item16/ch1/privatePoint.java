@@ -1,5 +1,10 @@
 package effective.java.item16.ch1;
 
+import effective.java.item16.ch2.Button;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class privatePoint {
     private double x;
     private double y;
@@ -32,4 +37,34 @@ public class privatePoint {
      * get,set 등등 접근매서드를 사용해서 여러부가로직도 추가하는게
      * 더나은것같다.
      */
+
+
+    /*
+        나중에 generic 쪽에 넣자.
+     */
+    public static void main(String[] args) throws ClassNotFoundException {
+
+//        Class<?> 안녕 = Class.forName("안녕");
+//        Class 반가워 = Class.forName("반가워");
+//
+        Class<Point> 햄스터 = (Class<Point>) Class.forName("햄스터");
+//        Class<Object> 훅훅 = (Class<Object>) 햄스터;
+//        Class<? extends Point> 햄스터1 = 햄스터;
+//        Class<Button> button = (Class<Button>) Class.forName("button");
+//        Class<? extends Point> 햄스터2 = button;
+//
+//        List<String> list= new ArrayList<>();
+//        List<Object> list1 = (List<Object>)list;
+//
+//        List<?> list2 = new ArrayList<>();
+//        List<String> list3 = (List<String>) list2;
+//
+        List<? extends Number> list4 = new ArrayList<>();
+        List<Integer> list5 = (List<Integer>) list4;
+//        List<String> list6 = (List<String>) list4;
+//
+//        Integer[] list7 = new Integer[10];
+//        Object[] list8 = list7;
+
+    }
 }

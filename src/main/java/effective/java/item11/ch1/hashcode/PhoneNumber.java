@@ -32,11 +32,23 @@ public class PhoneNumber {
 
     @Override
     public boolean equals(Object o) {
+
+        // 와 이것까지 잡아주네.
+//        Class<?> aClass1 = o.getClass();
+        //아래는 자동완성안되는이유 보장이 안된다.
+//        int lineNum1 = ((PhoneNumber) o).lineNum;
         if (this == o)
             return true;
+
+        Class<? extends PhoneNumber> aClass1 = getClass();
+        Class<?> aClass2 = o.getClass();
+
+
         if (o == null || getClass() != o.getClass())
             return false;
-
+        Class<?> aClass = o.getClass();
+        //아래는 어느정도 보장이 된다.
+//        int lineNum1 = ((PhoneNumber) o).lineNum;
         PhoneNumber that = (PhoneNumber) o;
 
         if (areaCode != that.areaCode)
@@ -49,8 +61,8 @@ public class PhoneNumber {
     @Override
     public int hashCode() {
         int result = areaCode;
-        result = 31 * result + (int) prefix;
-        result = 31 * result + (int) lineNum;
+        result = 31 * result + prefix;
+        result = 31 * result + lineNum;
         return result;
     }
 
@@ -58,4 +70,5 @@ public class PhoneNumber {
 //    public int hashCode() {
 //        return 1;
 //    }
+
 }

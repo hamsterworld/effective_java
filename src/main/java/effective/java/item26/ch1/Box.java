@@ -32,11 +32,13 @@ public class Box<E> {
         // 와일드카드는 아래처럼 쓰는건 아니고 printBox 와같은 매개변수때 보통사용하는듯?
 //        Box<?> box2 = new Box<>();
         Box<? extends Number> box3 = new Box<>();
+
 //        box3 = box;
 //
 //        box3.add(1);
 
         Class<? extends Box> aClass = box.getClass();
+        Box.printBox1(box);
     }
 
     // 비한정적 와일드카드를 쓰고있다 즉, 아무런 type 이 와도 상관없다는것이다.
@@ -44,6 +46,16 @@ public class Box<E> {
     private static void printBox(Box<?> box){
         System.out.println(box.get());
     }
+
+//    private static <T extends Number> void printBox(Box<T> box){
+//        System.out.println(box.get());
+//    }
+//    private static void hamster(Box<? extends Number> box){
+//        Number item1 = box.item;
+//        box.item = 10;
+//        System.out.println(box.get());
+//    }
+
 
 //    private static void printBox(Box<String> box){
 //        System.out.println(box.get());
@@ -62,5 +74,6 @@ public class Box<E> {
     private static void printBox1(Box<? extends Number> box){
         System.out.println(box.get());
     }
+
 
 }

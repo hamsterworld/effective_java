@@ -34,9 +34,8 @@ public class Order {
      *  그러면 어떻게?!
      *  그래서 책에서는 정적팩토리매서드로 표현하자라고 되어있다.
      */
-
     public static Order primeOrder(Product product){
-        //자기자신의 instance를 static으로서 사용해버리넴!?
+        //자기자신의 instance 를 static 으로서 사용해버리넴!?
         Order order = new Order();
         order.prime = true;
         order.product = product;
