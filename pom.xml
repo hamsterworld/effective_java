@@ -44,6 +44,12 @@
 			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<version>3.3.4</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -17,9 +17,9 @@ public class SubClass extends SuperClass implements MakerInterface {
         // 이것이 default method 가 runtime 중에 발생하는 에러다.
         // 개발자는 항상 compile error 를 선호해야한다.
 
-        SynchronousQueue<Object> objects = new SynchronousQueue<>();
-        objects.
-        objects.removeIf();
+//        SynchronousQueue<Object> objects = new SynchronousQueue<>();
+//        objects.
+//        objects.removeIf();
     }
 
     @Override
