@@ -16,7 +16,7 @@ public class HelloServiceFactory {
      *  static factory 를 사용한다면 유연하게 제공해줄수있다.
      *  또 이제 interface 에서도 위와같이 static 매서드를 사용할수있다.
      *  이것이 바로 static factory 의 3번째 장점 하위타입을 불러올수있다는것.
-     *  그리고 staticfactory 를 만드는시점에 굳이구현체가없어도된다라는말은 무엇일까?
+     *  그리고 staticFactory 를 만드는시점에 굳이구현체가없어도된다라는말은 무엇일까?
      * */
 
 }

@@ -15,6 +15,13 @@ public class SpellCheckerTest {
             return new DefaultDictionary();
         });
 
+        //람다도 길어질수있다.
+//        new SpellChecker(() -> {
+//            MockDictionary mockDictionary = new MockDictionary();
+//            DictionaryFactory dictionaryFactory = new DictionaryFactory();
+//            return mockDictionary;
+//        });
+
 //        SpellChecker spellChecker = new SpellChecker(DefaultDictionary::new);
 //        spellChecker.isValid("test");
 //

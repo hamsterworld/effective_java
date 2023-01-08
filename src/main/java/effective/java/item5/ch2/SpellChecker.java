@@ -2,6 +2,8 @@ package effective.java.item5.ch2;
 
 import effective.java.item5.ch2.Dictionary;
 
+import java.util.Collections;
+import java.util.SortedMap;
 import java.util.function.Supplier;
 
 public class SpellChecker {

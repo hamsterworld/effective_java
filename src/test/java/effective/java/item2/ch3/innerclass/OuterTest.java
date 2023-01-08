@@ -13,7 +13,7 @@ class OuterTest {
         Outer.Inner inner1 = new Outer().new Inner();
 
         /**
-         * static inner class는 독립적인 생성이 가능하다.
+         * static inner class 는 독립적인 생성이 가능하다.
          *
          * 좀 더 얘기 해보자면, 우리가 만드는 모든 클래스들은 원래 static 메모리에 올라가는 'static'입니다.
          * 내부 클래스에 static 키워드를 붙이면,
