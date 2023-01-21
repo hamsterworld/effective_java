@@ -1,6 +1,7 @@
 package effective.java.item1.staticfactory.GoodPoint345;
 
 
+import java.util.EnumSet;
 
 public class app {
 
@@ -12,8 +13,7 @@ public class app {
         //자바8부터는 interface로도 가능
         HelloServiceInterface ko1 = HelloServiceInterface.of("ko");
         ko1.hello();
-
-
+//        EnumSet.of(10);
     }
 
 }

@@ -9,7 +9,7 @@ public interface HelloServiceInterface {
 //    static class hamster{
 //
 //    }
-    public static HelloServiceInterface of(String lang){
+    static HelloServiceInterface of(String lang){
         if(lang.equals("ko")){
             return new KoreanHelloService();
         } else {
