@@ -8,7 +8,7 @@ class SpellCheckerTest {
 
     @Test
     void isVaile(){
-        assertTrue(SpellChecker.isValid("item1to14.txt"));
+        assertTrue(SpellChecker.isValid("item51.txt"));
     }
 
     @Test

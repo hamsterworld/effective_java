@@ -7,7 +7,7 @@ import java.io.*;
 //역직렬화로 어딘가에 저장되어있는 정보를 읽어올수가있다.
 public class ElvisSerialization {
 
-    //참고로할때 Elvis에서 implements에 Serializable를 해줘야된다.
+    //참고로할때 Elvis 에서 implements 에 Serializable 를 해줘야된다.
     public static void main(String[] args) {
 
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("elvis.obj"))){

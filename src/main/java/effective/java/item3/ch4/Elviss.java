@@ -10,6 +10,10 @@ public enum Elviss implements IElvis {
         System.out.println("지금 갈게");
     }
 
+    public void leaveMessage(String message){
+        System.out.println("할말을 남겨보세요. = " + message);
+    }
+
     @Override
     public void sing() {
         System.out.println("랄랄라라~");
@@ -33,6 +37,7 @@ public enum Elviss implements IElvis {
     public static void main(String[] args) {
         Elviss elvis = Elviss.INSTANCE;
         elvis.leaveTheBuilding();
+        elvis.leaveMessage("안녕하세요.");
     }
 
 }

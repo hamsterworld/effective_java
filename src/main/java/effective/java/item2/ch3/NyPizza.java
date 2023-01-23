@@ -1,5 +1,7 @@
 package effective.java.item2.ch3;
 
+import effective.java.item2.ch2.NutritionFacts1;
+
 import java.util.Comparator;
 import java.util.Objects;
 
@@ -34,6 +36,7 @@ public class NyPizza extends Pizza{
         super(builder);
         size = builder.size;
     }
+
 
 
 
