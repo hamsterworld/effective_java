@@ -1,7 +1,7 @@
 package effective.java.item8.ch1.finalizer;
 
 /**
- * finalize 와 cleaner 는 사용하지마라.
+ * finalize 를 사용 하는 방법.
  */
 public class Finalizer_Is_Bad {
 

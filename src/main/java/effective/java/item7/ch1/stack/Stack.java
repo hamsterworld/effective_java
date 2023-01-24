@@ -5,24 +5,28 @@ import java.util.Arrays;
 import java.util.EmptyStackException;
 
 /**
- * 1. 객체에 대한 레퍼런스가 남아있다면 해당 객체는 가비지컬렉터에 대상이 되지않는다.
- * (다쓴 객체를 항상 해제하지마라. -> null로 처리하는것인데 예외적이라햇지만 흔하다.)
- * 2. 메모리를 직접관리하는 클래스라면 메모리 누수에 주의하라
- * ex)stack, cache, listener or callback --> 일단 stack, cache, listener 가 대표적인 메모리누수의 예시들
- * 위의 예시들은 공통적으로 객체를 쌓아두는 공간이 있다는 것이다.
- * 그래서 이객체를 어떻게 정리할거냐? 이정리하는 방법들도 3가지이다.
+ * array,list,map,set 등과 같이 무언가를 담는것은 GC 의 대상이 되지않는다. 즉, 메모리를 직접관리한다.
+ * collections 처럼 쌓아놓는 이러한것들은 주의해서 사용해야한다.
+ * 그래서 collections 같은것들은 언제 우리가 null 처리를 해줘야하는가를 항상 염두해두면서 프로그래밍 할것.
  *
- * 첫번째, 여기 Stack 예시에서처럼 null을 명시해주는것이다.
+ * 책에서 설명하는 메모리 누수가 자주일어날수있는 3가지 ex) cache,listener,stack 과같은것도 결국에는
+ * 무엇인가를 collections 나 array 로 쌓아놓는다!
  *
- * 두번째, cache 는 Stack 의 pop 마냥 빼는 기능이없다면?
- * 물론 cache 도 데이터가 변경되면 없애야되긴한다. 일단 이번예제코드는 쌓이기만한다고생각해보자.
- * 그래서 여기서 쓰는게 weakHashMap 이다.
- * 레퍼런스에는 strong ,soft ,weak, phantom 이렇게 4가지가 있다.
- * 그중에 weak 레퍼런스를 사용할거고 weak 레퍼런스를 key 로 사용하는놈을 weak HashMap 이라고 한다.
- * 이놈의 특징은 key가 더이상참조가안되면 weak 레퍼런스빼고 더이상참조가 안되면
- * 그 key 를 가지고있는 value 를 Map 에서 빼준다.
+ * 1. null 처리
+ *  다 쓴 객체를 처리하는 가장 명시적인 방법이 바로 null 처리이다.
  *
- * 세번째, 참조 객체를 null 처리하는것은 예외적이다. 가장좋은 방법은 유효범위 밖으로 밀어내는것이다.
+ * 2. scope 밖으로 빼내기
+ *  다 쓴 객체를 처리하는 가장 일반적인 방법
+ *
+ * 3. 직접 관리
+ *  예를 들면, LRU Cache 라고해서 가장 최근10개만 살리겠다.
+ *  map 에서 size 가 11개가되면 가장오래된것을 remove 해줘서 삭제한다. (필요하면 null, scope 빼기 등을 활용할수도있을듯)
+ *
+ * 4. 특정한 자료구조를 사용한다.
+ *  weakHashMap 과같은것이 예시가 될수있다.
+ *
+ * 5. backgroundThreadPool 을 사용해서 주기적으로 지워준다.
+ *  비슷한 내용이긴한데 말그대로 주기적으로 clean-up 을 해준다.
  */
 public class Stack {
 
@@ -39,15 +43,11 @@ public class Stack {
         elements[size++] = e;
     }
 
-    public Object pop(){
-        if(size == 0)
-            throw new EmptyStackException();
-        return elements[--size]; //언젠간 메모리가 꽉차버릴것이다.
-    }
-
-    public Object pop2(){
-        return elements[100];
-    }
+//    public Object pop(){
+//        if(size == 0)
+//            throw new EmptyStackException();
+//        return elements[--size]; //언젠간 메모리가 꽉차버릴것이다.
+//    }
 
     /**
      * 원소를 위한 공간을 적어도 하나 이상 확보한다.
@@ -59,23 +59,14 @@ public class Stack {
         }
     }
 
-    // 코드 7-2 제대로 구현한 pop 매서드 (37쪽)
-//    public Object pop(){
-//        if(size == 0)
-//            throw new EmptyStackException();
-//        Object result = elements[--size];
-//        elements[size] = null; //다 쓴 참조 해체 //물론 result를 가져간곳에서 조차 다쓴다면 아래
-////        의 pop을했던곳도 다른 바운더리를 벗어나면 그객체의 생명주기는 끝난다.
-////        결국에는, null해준것처럼 되긴한다. 그래서 null처리를 해주는것은 되게 명시적인 방법이다.
-
-////        그래서 GC의 대상에서 벗어나는애들은 elements 처럼 무엇인가를 담고잇는 경우
-////        ex)List,Set,Map 같은경우이다. 이렇게 메모리를 직접관리하는 경우 메모리 누수에 주의해야한다.
-////        그래서 언제 바운더리를 벗어나게하거나 null처리를 해줘야하는가 항상 염두하자.
-////        null은 되게 명시적인 방법이다.
-////
-////        cache역시도 메모리누수를 발생시키는 주범이다.
-//        return result;
-//    }
+//     코드 7-2 제대로 구현한 pop 매서드 (37쪽)
+    public Object pop(){
+        if(size == 0)
+            throw new EmptyStackException();
+        Object result = elements[--size];
+        elements[size] = null;
+        return result;
+    }
 
     public static void main(String[] args) {
         Stack stack = new Stack();
@@ -84,18 +75,9 @@ public class Stack {
             stack.push("" + i);
         }
 
-
-        while(!(stack.size == 0)){
+        while(true){
             System.err.println(stack.pop());
         }
-
-//        stack = null;
-
-        System.out.println(stack.pop2());
-
-        while(true);
-
-
     }
 
 }

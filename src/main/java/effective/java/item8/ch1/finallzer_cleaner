@@ -3,7 +3,7 @@ OS 를 다루다보면 알게되겠지만 한번에 열수있는 socket(file)들
 그래서 자원관리를 잘해줘야한다.
 자원 관리를 위해 finalizer 와 cleaner 를 그래서 사용했던건데 사실상 못쓴다.
 
-finalizer 와 cleaner 사용을 피해라.
+- finalizer 와 cleaner 사용을 피해라.
 
 1. finalizer 와 cleaner 는 즉시 수행된다는 보장이 없다.
 2. 제때제때 실행이 안될수도있다.
