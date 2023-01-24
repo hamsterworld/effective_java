@@ -26,15 +26,16 @@ public class Room implements AutoCloseable{
     private final State state;
 
     //수거대상이 되면 방을 청소한다.
-    private final Cleaner.Cleanable cleanable;
+    private Cleaner.Cleanable cleanable;
 
     public Room(int numJunkPiles){
         state = new State(numJunkPiles);
-        cleanable = cleaner.register(this,state);
+        cleanable = cleaner.register(this, state);
     }
 
     @Override
     public void close() throws Exception {
+        System.out.println("AutoClose");
         cleanable.clean();
     }
 }
