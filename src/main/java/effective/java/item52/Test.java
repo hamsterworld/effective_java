@@ -1,5 +1,9 @@
 package effective.java.item52;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Test {
 
     private String test1;
@@ -12,5 +16,15 @@ public class Test {
 
     public Test(int test2) {
         this.test2 = test2;
+    }
+
+
+    public static void main(String[] args) {
+        new Thread(System.out::println).start();
+//        Runnable r
+//        Callable<String>
+        ExecutorService exec = Executors.newCachedThreadPool();
+        // 컴파일 에러가 난다.
+//        exec.submit(System.out::println);
     }
 }
