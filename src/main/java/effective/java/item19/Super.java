@@ -9,6 +9,11 @@ public class Super {
     }
 
     public void overrideMe(){
+        System.out.println("super");
+    }
 
+    public static void main(String[] args) {
+        Super aSuper = new Super();
+        aSuper.overrideMe();
     }
 }

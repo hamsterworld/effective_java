@@ -8,7 +8,7 @@ public class Sub extends Super{
     Sub(){
         // 상속받은 class 는 생성자에서 super() 를 호출하고있다.
         // 그래서 먼저 overrideMe()를 호출하고있다.
-        // 근데 이미 instance 는 안만들어졌다.
+        // 근데 instance 는 안만들어졌다.
         // 그래서 null 이발생
         // 그래서 그다음은 잘된다.
 

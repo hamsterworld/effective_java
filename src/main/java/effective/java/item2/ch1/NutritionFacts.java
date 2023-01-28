@@ -85,8 +85,6 @@ public class NutritionFacts {
         NutritionFacts nf = new NutritionFacts(1, 1);
         NutritionFacts nf2 = new NutritionFacts(1, 1, 1);
         NutritionFacts nf3 = new NutritionFacts(1, 1, 1, 1);
-
-
     }
 
 

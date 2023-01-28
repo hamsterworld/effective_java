@@ -39,6 +39,13 @@ public class InstrumentedHashSet<E> extends HashSet<E> {
     // 만약에 Set 에 새로운 add 기능이 추가됫다.
     // 그러면 우리가 이 기능이 추가된걸 알고 다시 Override 해서 count 기능을 넣을수있을까?
     // 아마 불가능할것이다. 즉, 구멍이 생기게된다.
+
+    /*
+        되게 신기하네
+        super 달아주고하면 super 께 나오지만
+        또, super.addAll 안에서 사용되는 add 조차도
+        overriding 된 add 를 사용하네
+     */
     @Override
     public boolean addAll(@NotNull Collection<? extends E> c) {
         addCount += c.size();

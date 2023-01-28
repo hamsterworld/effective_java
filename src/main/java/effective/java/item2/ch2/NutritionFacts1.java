@@ -65,24 +65,6 @@ public class NutritionFacts1 {
 
     private NutritionFacts1 (Builder builder){
 
-        ArrayList<NutritionFacts> list = new ArrayList<>();
-
-        list.add(new NutritionFacts(10,101,10,10,10,10));
-        list.add(new NutritionFacts(10,101,10,10,10,10));
-        list.add(new NutritionFacts(10,101,10,10,10,10));
-        list.add(new NutritionFacts(10,101,10,10,10,10));
-
-        Collections.sort(list,(o1, o2) -> o1.getFact() - o1.getFact());
-
-        Comparator<NutritionFacts> compare = (o1, o2) -> o1.getFact() - o1.getFact();
-
-        Comparator<NutritionFacts> compare1 = new Comparator<NutritionFacts>() {
-            @Override
-            public int compare(NutritionFacts o1, NutritionFacts o2) {
-                return 0;
-            }
-        };
-
         this.servingSize = builder.servingSize;
         this.servings = builder.servings;
         this.fact = builder.fact;

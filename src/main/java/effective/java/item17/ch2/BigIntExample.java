@@ -5,7 +5,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 4. 불변 객체끼리는 데이터를 공유해도된다.
+ * 4.
+ * 불변 객체끼리는 데이터를 공유해도된다.
  * + 객체를 만들때 불변객체들로 구성하면 장점이 많다 대표적으로 Set
  */
 public class BigIntExample {
@@ -19,7 +20,7 @@ public class BigIntExample {
         // 안에 내구 구조를 보면 이렇게되어있다.
         // new BigInteger(this.mag,-this.signum);
         // ten 도 this.mag 사용 minusTen 도 this.mag 사용
-        // 어? this.mag 가 바뀌면 이것을 공유하는 ref 는 전부 값이 바뀌겟네?
+        // 어? this.mag 가 바뀌면 이것을 공유하는 ref 는 전부 값이 바뀌겟네? (this.mag 가 20으로변경되면 다른것도 -20으로 변경될수있다는것)
         // 맞다. 그러나 불변객체의 데이터를 불변 객체가 사용하고있으므로 안전하다.
         // 그래서 데이터 공유가 가능하다는것.
         // 즉, 불변객체는 내부데이터까지 공유해서 사용할수있다는것

@@ -1,11 +1,6 @@
 package effective.java.item1.staticfactory;
 
 import effective.java.item1.staticfactory.GoodPoint345.HelloServiceInterface;
-import effective.java.item1.staticfactory.GoodPoint345.KoreanHelloService;
-
-import java.util.EnumSet;
-import java.util.Optional;
-import java.util.ServiceLoader;
 
 public class staticfactory {
 
@@ -23,14 +18,6 @@ public class staticfactory {
      * 정적 팩터리 매서드는 프로그래머가 찾기힘들다.
      * */
     public static void main(String[] args) {
-//        ServiceLoader<HelloServiceInterface> loader = ServiceLoader.load(HelloServiceInterface.class);
-//        Optional<HelloServiceInterface> helloServiceInterfaceOptional = loader.forEach();
-//        helloServiceInterfaceOptional.ifPresent(h->{
-//            System.out.println(h.hello());
-//        });
-
         HelloServiceInterface ko = HelloServiceInterface.of("ko");
-
-
     }
 }

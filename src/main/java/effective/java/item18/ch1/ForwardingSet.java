@@ -57,7 +57,7 @@ public class ForwardingSet<E> implements Set<E> {
 
     @Override
     public boolean add(E e) {
-        return false;
+        return s.add(e);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class ForwardingSet<E> implements Set<E> {
 
     @Override
     public boolean addAll(@NotNull Collection<? extends E> c) {
-        return false;
+        return s.addAll(c);
     }
 
     @Override

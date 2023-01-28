@@ -17,7 +17,7 @@ public class Settings {
     }
 
     /**  private 생성자를 사용하게되면
-     *   javadoc에서 문서화가 힘들다.
+     *   javadoc 에서 문서화가 힘들다.
      *   그래서 주석으로 처리하거나, 명명을 잘해서 해야된다.
      * */
 

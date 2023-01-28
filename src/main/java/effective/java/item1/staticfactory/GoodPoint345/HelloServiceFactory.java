@@ -2,7 +2,7 @@ package effective.java.item1.staticfactory.GoodPoint345;
 
 public class HelloServiceFactory {
 
-    public static HelloService of(String lang){
+    public static HelloServiceInterface of(String lang){
         if(lang.equals("ko")){
             return new KoreanHelloService();
         } else {

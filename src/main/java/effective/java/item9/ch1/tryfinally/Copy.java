@@ -9,11 +9,11 @@ public class Copy {
     private static final int BUFFER_SIZE = 8 * 1024;
 
     // 자원이 둘 이상이면 try-finally 방식은 너무 지저분해진다.
-    //그러면 그럴수있다 어? 그냥 try{} 하나만쓰고
-    //finally{ out.close() in.close() 다하면되지않아?
-    //그러면 중간에 에러가나면 리소스들이 제대로 안닫힐수도있다 leak 이 일어난다.
-    //만약에 out 에서 문제가생겨서 안닫히더라도 최소한 in은 닫을수있다 아래처럼 try 를 2개쓰면.
-    //물론 이코드도 문제는 없지만 좀더 권장하는 방법이 있다.
+    // 그러면 그럴수있다 어? 그냥 try{} 하나만쓰고
+    // finally{ out.close() in.close() 다하면되지않아?
+    // 그러면 중간에 에러가나면 리소스들이 제대로 안닫힐수도있다 leak 이 일어난다.
+    // 만약에 out 에서 문제가생겨서 안닫히더라도 최소한 in은 닫을수있다 아래처럼 try 를 2개쓰면.
+    // 물론 이코드도 문제는 없지만 좀더 권장하는 방법이 있다.
     static void copy(String src,String dst) throws IOException {
         FileInputStream in = new FileInputStream(src);
         try{
