@@ -14,15 +14,23 @@ public class Order {
 //        this.prime = prime;
 //    }
 
+//    public static void main(String[] args) {
+//        new Order(new Product(),true); // 일반주문
+//        //긴급주문
+//    }
+
 //    public Order(Product product,boolean urgent){
 //        this.product = product;
 //        this.urgent = urgent;
 //    }
 
+
+    // 같은 파라미터 개수는 오버로딩
 //    public Order(boolean urgent,Product product){
 //        this.product = product;
 //        this.urgent = urgent;
 //    }
+
 
     /**
      *  위에와 같이 표현하고싶다.
@@ -47,6 +55,11 @@ public class Order {
         order.urgent = true;
         order.product = product;
         return order;
+    }
+
+    public static void main(String[] args) {
+        Order order = Order.primeOrder(new Product());
+        Order order1 = Order.urgentOrder(new Product());
     }
 
     /**

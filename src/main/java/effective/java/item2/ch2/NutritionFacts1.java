@@ -1,5 +1,6 @@
 package effective.java.item2.ch2;
 
+import lombok.Builder;
 import lombok.ToString;
 
 import java.util.ArrayList;
@@ -64,19 +65,16 @@ public class NutritionFacts1 {
     }
 
     private NutritionFacts1 (Builder builder){
-
         this.servingSize = builder.servingSize;
         this.servings = builder.servings;
         this.fact = builder.fact;
         this.sodium = builder.sodium;
         this.carbohydrate = builder.carbohydrate;
         this.calories = builder.calories;
-
     }
 
     public static void main(String[] args) {
         NutritionFacts1 bulide1 = new Builder(1, 1).calories(1).sodium(1).bulide();
-
     }
 
 

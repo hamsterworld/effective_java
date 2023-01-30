@@ -24,6 +24,7 @@ public class Sum {
         System.out.println(x);
 
         while(true);
+
     }
 
     /**

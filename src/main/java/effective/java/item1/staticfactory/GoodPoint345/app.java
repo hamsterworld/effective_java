@@ -1,17 +1,18 @@
 package effective.java.item1.staticfactory.GoodPoint345;
 
+import java.util.Collections;
+import java.util.EnumSet;
+
 public class app {
 
     public static void main(String[] args) {
 
-        // 요렇게 static factory 로 원하는대로 뽑아낼수있다.
-        HelloServiceInterface ko = HelloServiceFactory.of("ko");
-        ko.hello();
+        HelloServiceInterface ko2 = HelloServiceInterface.of("ko");
+        System.out.println(ko2.hello()); // 안녕
 
-        // 자바8부터는 interface 로도 가능
-        HelloServiceInterface ko1 = HelloServiceInterface.of("ko");
-        ko1.hello();
-//        EnumSet.of(10);
+        HelloServiceInterface ko21 = HelloServiceInterface.of("ko2");
+        System.out.println(ko21.hello()); // hello
+
     }
 
 }

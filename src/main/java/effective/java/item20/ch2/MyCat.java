@@ -1,7 +1,6 @@
 package effective.java.item20.ch2;
 
 // 여기서 MyCat 은 더이상 AbstractFlyable 상속을 못받는다.
-// interface 와 추상클래스로 가능
 // 이것이 책에서 말하는 다중상속을 시뮬레이트 할수있다는말이다.
 public class MyCat extends AbstractCat implements Flyable{
 
@@ -21,6 +20,7 @@ public class MyCat extends AbstractCat implements Flyable{
         MyCat myCat = new MyCat();
         System.out.println(myCat.sound());
         System.out.println(myCat.name());
+        myCat.fly();
     }
 
     @Override
@@ -29,9 +29,6 @@ public class MyCat extends AbstractCat implements Flyable{
     }
 
     private static class MyFlyable extends AbstractFlyable{
-        @Override
-        public void fly() {
-            System.out.println("날아라");
-        }
+
     }
 }

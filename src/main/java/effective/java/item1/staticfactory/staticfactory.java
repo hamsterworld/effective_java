@@ -2,6 +2,9 @@ package effective.java.item1.staticfactory;
 
 import effective.java.item1.staticfactory.GoodPoint345.HelloServiceInterface;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class staticfactory {
 
     /**
@@ -18,6 +21,7 @@ public class staticfactory {
      * 정적 팩터리 매서드는 프로그래머가 찾기힘들다.
      * */
     public static void main(String[] args) {
-        HelloServiceInterface ko = HelloServiceInterface.of("ko");
+
+
     }
 }

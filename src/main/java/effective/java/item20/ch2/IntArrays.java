@@ -27,17 +27,17 @@ public class IntArrays {
 //
 //        }
 
-        //        AbstractList<Object> hamster = new AbstractList<>() {
-//            @Override
-//            public Object get(int index) {
-//                return null;
-//            }
-//
-//            @Override
-//            public int size() {
-//                return 0;
-//            }
-//        };
+        AbstractList<Object> hamster = new AbstractList<>() {
+            @Override
+            public Object get(int index) {
+                return null;
+            }
+
+            @Override
+            public int size() {
+                return 0;
+            }
+        };
 
         // 그러나 추상클래스인 skeleton class 통해 구현하면
         // 전부다 구현하지않아도 일부분만 재정의해서

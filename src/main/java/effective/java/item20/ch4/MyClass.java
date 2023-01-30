@@ -4,7 +4,7 @@ package effective.java.item20.ch4;
 // 만약에 MyInterface 에서의 toString, HashCode , Equals
 // 를 사용하면 rule1 을 깨기때문에 혼란함이 증가한다.
 
-// 또 toString, HashCode , Equals 는 field 가 필요한
-// method 이기때문에 애초에 존재하기도 힘든 method 이다.
+// [ 또 toString, HashCode , Equals 는 field 가 필요한
+// method 이기때문에 애초에 존재하기도 힘든 method 이다. ]
 public class MyClass extends Object implements MyInterface{
 }

@@ -22,6 +22,8 @@ public class MetaElvis<T> implements Singer{
     }
 
     public static void main(String[] args) {
+
+        // 싱글턴이 아닐수도있다.
         MetaElvis<String> elvis1 = MetaElvis.getInstance();
         MetaElvis<Integer> elvis2 = MetaElvis.getInstance();
 

@@ -1,8 +1,11 @@
 package effective.java.item5.ch1;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 /**
+ *
  * item5. 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라.
  *
  * 1. 사용하는 자원에 따라 동작이 달라지는 클래스는 정적 유틸리티 클래스나 싱글턴방식이 적합하지않다.

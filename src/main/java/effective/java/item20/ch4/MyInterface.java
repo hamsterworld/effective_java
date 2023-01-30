@@ -1,8 +1,8 @@
 package effective.java.item20.ch4;
 
 // interface 는
-// toString, HashCode , Equals 에대한
-// default method 의 overriding 을 막고있다
+// [ toString, HashCode , Equals 에대한
+// default method 의 overriding 을 막고있다. ]
 // 왜막았을까?
 // default method 의 핵심은 method 의 추가에 있다.
 // interface 에 새롭게 구현할 method 를 추가한다면
@@ -31,6 +31,6 @@ public interface MyInterface {
 //
 //    default boolean equals(Object o){
 //        return true;
-//    }
+//    }                                  ==> 결론은 이런식으로 쓰지말것
 
 }

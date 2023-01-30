@@ -2,6 +2,7 @@ package effective.java.item4.ch1;
 
 
 /**
+ *
  *  인스턴스화를 막으려면 private 생성자를 사용해라.
  *  어떤 경우에는 인스턴스를 만들필요가 없는경우가있다.
  *  즉,인스턴스를 만드는것을 권장하지 않는경우 객체지향언어에서
@@ -12,6 +13,7 @@ package effective.java.item4.ch1;
  *
  */
 public class UtilityClass {
+
 
     /**
      * 이클래스는 인스턴스를 만들 수 없습니다.
@@ -44,6 +46,7 @@ public class UtilityClass {
         //그러나 인스턴스는 만들어질수있다.
 
     }
+
 
 
 

@@ -11,6 +11,7 @@ public class Elvis implements Serializable {
 
     //리플렉서에서 추가적인 instance가 생성되는것을 막는다.
     private Elvis() {
+//        throw new IllegalArgumentException("꺼져");
     };
 
     public void leaveTheBuilding(){

@@ -1,15 +1,15 @@
 package effective.java.item1.staticfactory.BadPoint1;
 
+// 컴포지션
 public class Settings {
 
     private boolean userAutoSteer;
     private boolean useABS;
     private Difficulty difficulty;
 
-//    private Settings(){
-//
-//    }
+    private Settings(){
 
+    }
 
     private static final Settings SETTINGS = new Settings();
     public static Settings newInstance(){
@@ -20,6 +20,5 @@ public class Settings {
      *   javadoc 에서 문서화가 힘들다.
      *   그래서 주석으로 처리하거나, 명명을 잘해서 해야된다.
      * */
-
 
 }

@@ -21,6 +21,7 @@ public class Settings {
         return SETTINGS;
     }
 
+
     /**
      *  생성자를 public 하게 제공하는 순간부터,
      *  사용하는쪽에서 마음껏 생성할수가있다.
