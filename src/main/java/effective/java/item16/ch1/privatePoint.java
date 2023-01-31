@@ -47,7 +47,7 @@ public class privatePoint {
 //        Class<?> 안녕 = Class.forName("안녕");
 //        Class 반가워 = Class.forName("반가워");
 //
-        Class<Point> 햄스터 = (Class<Point>) Class.forName("햄스터");
+//        Class<Point> 햄스터 = (Class<Point>) Class.forName("햄스터");
 //        Class<Object> 훅훅 = (Class<Object>) 햄스터;
 //        Class<? extends Point> 햄스터1 = 햄스터;
 //        Class<Button> button = (Class<Button>) Class.forName("button");
@@ -55,9 +55,9 @@ public class privatePoint {
 //
 //        List<String> list= new ArrayList<>();
 //        List<Object> list1 = (List<Object>)list;
-//
-//        List<?> list2 = new ArrayList<>();
-//        List<String> list3 = (List<String>) list2;
+
+        List<?> list2 = new ArrayList<>();
+        List<String> list3 = (List<String>) list2;
 //
         List<? extends Number> list4 = new ArrayList<>();
         List<Integer> list5 = (List<Integer>) list4;

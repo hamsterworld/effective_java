@@ -25,8 +25,21 @@ package effective.java.item21.ch1;
  *  3rd party 입장에서는 그게 쉽지않다.
  * https://commons.apache.org/proper/commons-collections/javadocs/api-3.2.2/index.html
  * https://commons.apache.org/proper/commons-collections/javadocs/api-4.4/index.html
- * SYNCHRONIZEDCOLLECTION 한번 볼것
+ * SynchronizedCollection 한번 볼것
  * removeif 를 다시구현하고있다.
+ *
+ * Collection -> SynchronizedCollection
+ * 인데 Collection 에 removeIf 를 추가했다.
+ * 근데 얘는 lock 을사용안하는 매서드이다.
+ * 그래서 SynchronizedCollection 를 구현한 인스턴스가
+ * removeIf 를 사용하면 concurrentModificationException 발생할수있다는말.
+ *
+ * 나중에 Collections.synchronizedCollection 에 속하는 애들은
+ * removeIf 를 오버라이딩해서 사용하고있긴하지만
+ * JDK 에속하지않는 다른 제3자 Collection 들은 여전히 위험에 노출되있다.
+ *
+ * 결론, 기존 사용되는 interface 에 default method 추가는 굉장히 신중해야한다.
+ * 또 interface 설계시 항상 구현하는 사람의 입장을 생각해야한다.
  */
 public interface MakerInterface {
 

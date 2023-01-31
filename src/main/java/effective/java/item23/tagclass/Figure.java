@@ -4,7 +4,7 @@ package effective.java.item23.tagclass;
  * 태그 달린 클래스 - 클래스 계층보다 훨씬 나쁘다!
  */
 class Figure {
-    enum Shape { RECTANGLE,CIRCLE}
+    enum Shape { RECTANGLE,CIRCLE }
 
     // 태그필드 - 현재의 모양을 나타낸다.
     // Figure 가 RECTANGLE,CIRCLE 둘중 하나라는 것이다.
@@ -35,7 +35,7 @@ class Figure {
      *  태그달린 class 는 그래서 if 문이나 switch 문이 많을것이다.
      *  많다면 한번쯤은 의심해봐도 좋다.
      *  즉, 너무 이 class 에 많은것들을 몰아넣은것은 아닌가?
-     * @return
+     *
      */
     double area(){
         switch (shape){
