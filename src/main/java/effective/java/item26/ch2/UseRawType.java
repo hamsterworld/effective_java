@@ -1,6 +1,7 @@
 package effective.java.item26.ch2;
 
 public class UseRawType<E> {
+
     private E e;
 
     // Class 는 아래처럼 Generic 으로 같이쓸수없기에.

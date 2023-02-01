@@ -12,7 +12,7 @@ import java.util.List;
  * 타입 매개변수 : E
  * 실제 타입 매개변수 : String
  * 한정적 타입 매개 변수 : List<E extends Number>
- * 비 한정적 와일드카드 타입 : Class<?>
+ * 비 한정적 와일드 카드 타입 : Class<?>
  * 한정적 와일드 카드 타입 : Class<? extends Annotation>
  */
 public class GenericBasic {

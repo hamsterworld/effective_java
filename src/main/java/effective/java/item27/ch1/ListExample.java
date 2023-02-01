@@ -25,7 +25,10 @@ public class ListExample {
                 ~~ 이래저래해서 type 은 안정하다~
              */
             @SuppressWarnings("unchecked") // 매서드에다가도 붙일수있지만 가능한 좁은 범위에 붙이자.
-            T[] result = (T[]) Arrays.copyOf(elements, size, a.getClass());
+            T[] result = (T[]) Arrays.copyOf(elements, size, a.getClass()); // Object[] 이므로 뭐가됫든지간에 변환이 가능한건 팩트다.
+                                                                            // Array 는 변환이 가능하기때문 제네릭은 변하지않는다.
+                                                                            // a.getClass 때문에 T[] 라는것을 보장할수있기때문에 casting 도 가능하다.
+
             return result; // annotation 은 return 에다가 못붙이므로.
         }
         System.arraycopy(elements,0,a,0,size);

@@ -40,6 +40,7 @@ public class Generic_Chooser_Array<T> {
         for(int i =0;i<10;i++){
             Integer choice = chooser.choose();
             Integer choose = (Integer)chooser_array.choose();
+//            (String)chooser_array.choose();
             System.out.println(choose);
             System.out.println(choice);
         }

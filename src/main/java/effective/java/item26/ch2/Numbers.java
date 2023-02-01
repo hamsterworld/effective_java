@@ -40,7 +40,7 @@ public class Numbers {
         // 야 그러면 애초에 Raw Type 쓰면되는거아니야?
         // 위에서 확인했듯이 안전하지않다.
 
-        // 한정적 못받는다.
+        // 당연히 못받지
 //        Set<String> stringSet = set;
 
         System.out.println(Numbers.numElementsInCommon(Set.of(1,2,3),Set.of(1,2)));

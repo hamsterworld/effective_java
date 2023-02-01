@@ -23,7 +23,7 @@ public class IntegerToString {
         // List 는 불공변
         List<String> names = new ArrayList<>();
         // List<Object> objects = names;
-        // 위 둘은 List<String> 와 List<Object> 는 그냥 다른타입이다. 서로 변화하거나 그런게없다.
+        // 위 둘은 List<String> 와 List<Object> 는 그냥 다른타입이다. 서로 변화하거나 그런게없다. (굳이 한다면 와일드카드 써야지 근데 와일드카드는 넣을수없다.)
         // 이래서 List 는 불공변이라는것이다.
         // generic 은 이렇게 컴파일단계에서 명시되있지만
         // 나중에 소거된다.
