@@ -12,12 +12,13 @@ import java.util.List;
 public class RecursiveTypeBound {
 
     // static method 는 거이 generic method 에서만 사용되는듯?
-    public static <E extends Comparable<? super E>> E max(List<E> list) {
+    public static <E extends Comparable<? super E>> E max(List<? extends E> list) {
         if (list.isEmpty()){
             throw new IllegalArgumentException("빈 리스트");
         }
 
         E result = null;
+
         for (E e : list){
             if (result == null || e.compareTo(result) > 0){
                 result = e;
@@ -69,7 +70,6 @@ public class RecursiveTypeBound {
         // public static <E extends Comparable<? super E>> E max(List<? extends E> list)
         IntegerBox max3 = max(list);
 
-        // 개인적으로 여전히 <? extends E> 는 필요가 없는듯.
 
 
 

@@ -46,19 +46,19 @@ public class Stack<E> {
     }
 
     // 코드 31-1 와일드카드 타입을 사용하지 않은 pushAll 메서드 - 결함이 있다! (181쪽)
-//    public void pushAll(Iterable<E> src) {
-//        for (E e : src)
-//            push(e);
-//    }
+    public void pushAll(Iterable<E> src) {
+        for (E e : src)
+            push(e);
+    }
 
 //      코드 31-2 E 생산자(producer) 매개변수에 와일드카드 타입 적용 (182쪽)
 //    훨씬 유연해진다.
     // 생산자 = 뭔가 넣거나,쌓거나 하면 producer
-    public void pushAll(Iterable<? extends E> src) {
-        for (E e : src) {
-            push(e);
-        }
-    }
+//    public void pushAll(Iterable<? extends E> src) {
+//        for (E e : src) {
+//            push(e);
+//        }
+//    }
 
     // 코드 31-3 와일드카드 타입을 사용하지 않은 popAll 메서드 - 결함이 있다! (183쪽)
 //    public void popAll(Collection<E> dst) {
@@ -70,10 +70,16 @@ public class Stack<E> {
     // 뭔가 빼거나 pop 하거나그러면 소비자.
     public void popAll(Collection<? super E> dst) {
         while (!isEmpty()){
-            dst.add(pop());
+            E pop = pop();
+            dst.add(pop);
         }
     }
 
+//    public void popAll(Collection<? extends E> dst) {
+//        while (!isEmpty()){
+//            dst.add(pop());
+//        }
+//    }
     // 제네릭 Stack을 사용하는 맛보기 프로그램
     public static void main(String[] args) {
         Stack<Number> numberStack = new Stack<>();

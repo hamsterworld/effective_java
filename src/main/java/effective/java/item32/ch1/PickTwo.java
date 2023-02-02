@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 // 미묘한 힙 오염 발생 (193-194쪽)
 public class PickTwo {
     // 코드 32-2 자신의 제네릭 매개변수 배열의 참조를 노출한다. - 안전하지 않다! (193쪽)
-
+    // 리스트로 바꾸는게 제일안전하다. 항상 이코드가 문제가되는것은 아니다.
     static <T> T[] toArray(T... args) {
         return args;
     }
