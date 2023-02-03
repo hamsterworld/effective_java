@@ -33,6 +33,10 @@ public enum PayrollDay {
                 return minsWorked <= MINS_PER_SHIFT ? 0 :
                         (minsWorked - MINS_PER_SHIFT) * payRate / 2;
             }
+            // 이런식으로 추가가 가능하다.
+//            void hamster(){
+//
+//            }
         },
         WEEKEND {
             int overtimePay(int minsWorked, int payRate) {

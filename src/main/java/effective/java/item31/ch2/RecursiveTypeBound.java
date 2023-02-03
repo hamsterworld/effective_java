@@ -12,6 +12,9 @@ import java.util.List;
 public class RecursiveTypeBound {
 
     // static method 는 거이 generic method 에서만 사용되는듯?
+    // <E> max(List<E> list) 와 <E> max(List<? extends E> list) 를 비교해보자.
+    // List<? super E> 가되면 알지 c <- p 는 자기자신으로 원래 되돌아가는것만 허용된다.
+    // 그래서 안된다.
     public static <E extends Comparable<? super E>> E max(List<? extends E> list) {
         if (list.isEmpty()){
             throw new IllegalArgumentException("빈 리스트");

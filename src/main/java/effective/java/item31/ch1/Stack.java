@@ -46,19 +46,24 @@ public class Stack<E> {
     }
 
     // 코드 31-1 와일드카드 타입을 사용하지 않은 pushAll 메서드 - 결함이 있다! (181쪽)
-    public void pushAll(Iterable<E> src) {
-        for (E e : src)
-            push(e);
-    }
+//    public void pushAll(Iterable<E> src) {
+//        for (E e : src)
+//            push(e);
+//    }
 
 //      코드 31-2 E 생산자(producer) 매개변수에 와일드카드 타입 적용 (182쪽)
 //    훨씬 유연해진다.
     // 생산자 = 뭔가 넣거나,쌓거나 하면 producer
-//    public void pushAll(Iterable<? extends E> src) {
-//        for (E e : src) {
-//            push(e);
-//        }
-//    }
+
+    /**
+     * 이건 쉽게 이해가 될듯
+     * @param src
+     */
+    public void pushAll(Iterable<? extends E> src) {
+        for (E e : src) {
+            push(e);
+        }
+    }
 
     // 코드 31-3 와일드카드 타입을 사용하지 않은 popAll 메서드 - 결함이 있다! (183쪽)
 //    public void popAll(Collection<E> dst) {
@@ -68,6 +73,8 @@ public class Stack<E> {
 
     // 코드 31-4 E 소비자(consumer) 매개변수에 와일드카드 타입 적용 (183쪽)
     // 뭔가 빼거나 pop 하거나그러면 소비자.
+    // pushAll 을 보면알수있듯이 E 의 하위타입들이 stack 에 쌓여있을수있다.
+    // dst 를 여기서 좀더 유연하게 설계하려면 그상위타입들만 Collection 제네릭타입으로 가능하다는 사실을 안다.
     public void popAll(Collection<? super E> dst) {
         while (!isEmpty()){
             E pop = pop();
@@ -98,6 +105,9 @@ public class Stack<E> {
 
         System.out.println(objects);
 
-        //PECS 팩스~
+        //PECS 팩스~ PECS 에 너무 얽매이지말자.
+        /**
+         * extends 와 super 를 사용하면 API 를 좀더 유연하게 설계할수있다는 점이다.
+         */
     }
 }
