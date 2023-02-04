@@ -1,5 +1,7 @@
 package effective.java.item37;
 import java.util.*;
+import java.util.stream.Collectors;
+
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toSet;
 
@@ -7,6 +9,7 @@ import static java.util.stream.Collectors.toSet;
 
 // 식물을 아주 단순하게 표현한 클래스 (226쪽)
 class Plant {
+
     enum LifeCycle { ANNUAL, PERENNIAL, BIENNIAL }
 
     final String name;
@@ -44,7 +47,7 @@ class Plant {
                     LifeCycle.values()[i], plantsByLifeCycleArr[i]);
         }
 
-        // 코드 37-2 EnumMap을 사용해 데이터와 열거 타입을 매핑한다. (227쪽)
+        // 코드 37-2 EnumMap 을 사용해 데이터와 열거 타입을 매핑한다. (227쪽)
         Map<LifeCycle, Set<Plant>> plantsByLifeCycle =
                 new EnumMap<>(LifeCycle.class);
         for (LifeCycle lc : LifeCycle.values())
@@ -53,13 +56,24 @@ class Plant {
             plantsByLifeCycle.get(p.lifeCycle).add(p);
         System.out.println(plantsByLifeCycle);
 
-        // 코드 37-3 스트림을 사용한 코드 1 - EnumMap을 사용하지 않는다! (228쪽)
+        // 코드 37-3 스트림을 사용한 코드 1 - EnumMap 을 사용하지 않는다! (228쪽)
         System.out.println(Arrays.stream(garden)
                 .collect(groupingBy(p -> p.lifeCycle)));
 
-        // 코드 37-4 스트림을 사용한 코드 2 - EnumMap을 이용해 데이터와 열거 타입을 매핑했다. (228쪽)
+        // 코드 37-4 스트림을 사용한 코드 2 - EnumMap 을 이용해 데이터와 열거 타입을 매핑했다. (228쪽)
         System.out.println(Arrays.stream(garden)
-                .collect(groupingBy(p -> p.lifeCycle,
-                        () -> new EnumMap<>(LifeCycle.class), toSet())));
+                .collect(groupingBy(p -> p.lifeCycle, () -> new EnumMap<>(LifeCycle.class), toSet())));
+
+        // 응용해본코드
+        EnumMap<LifeCycle, Set<Integer>> collect = Arrays.stream(garden).
+                collect(
+                        groupingBy(
+                                p -> p.lifeCycle,
+                                () -> new EnumMap<>(LifeCycle.class),
+                                Collectors.mapping(plant -> plant.name.length(), toSet())
+                        )
+                );
+        System.out.println(collect);
+
     }
 }

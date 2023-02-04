@@ -24,4 +24,5 @@ public class Text {
         Text text = new Text();
         text.applyStyles(EnumSet.of(Style.BOLD, Style.ITALIC));
     }
+
 }
