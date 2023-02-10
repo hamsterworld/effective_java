@@ -11,4 +11,9 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Test {
+    String value() default "기본입니다.";
+    String hamster() default "기본 햄스터 입니다.";
+
+//    Object hamster2(); 되는 type 이 있고 아닌 type 이 있는듯. ,그리고 기본 default 값을 설정안해주면 필수값이 되는듯.
+
 }

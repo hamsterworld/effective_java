@@ -8,4 +8,5 @@ import java.lang.annotation.*;
 @Repeatable(ExceptionTestContainer.class)
 public @interface ExceptionTest {
     Class<? extends Throwable> value();
+
 }

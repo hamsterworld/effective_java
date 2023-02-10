@@ -1,6 +1,9 @@
 package effective.java.item50;
 import java.util.*;
 
+/**
+ * item50, 방어적 복사본을 만들어라!
+ */
 // 코드 50-1 기간을 표현하는 클래스 - 불변식을 지키지 못했다. (302-305쪽)
 public final class Period {
     private final Date start;
@@ -10,16 +13,20 @@ public final class Period {
      * @param  start 시작 시각
      * @param  end 종료 시각. 시작 시각보다 뒤여야 한다.
      * @throws IllegalArgumentException 시작 시각이 종료 시각보다 늦을 때 발생한다.
-     * @throws NullPointerException start나 end가 null이면 발생한다.
+     * @throws NullPointerException start 나 end 가 null 이면 발생한다.
      */
     public Period(Date start, Date end) {
-        if (start.compareTo(end) > 0)
-            throw new IllegalArgumentException(
-                    start + "가 " + end + "보다 늦다.");
+        if (start.compareTo(end) > 0){
+            throw new IllegalArgumentException(start + "가 " + end + "보다 늦다.");
+        }
         this.start = start;
         this.end   = end;
     }
 
+    /**
+     * attacks class 에서보면
+     * 방어적복사본을 사용안해서 공격당했다.
+     */
     public Date start() {
         return start;
     }

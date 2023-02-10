@@ -2,8 +2,12 @@ package effective.java.item42;
 
 import java.util.function.DoubleBinaryOperator;
 
+/**
+ * 람다를 사용하라!
+ */
 // 코드 42-4 함수 객체(람다)를 인스턴스 필드에 저장해 상수별 동작을 구현한 열거 타입 (256-257쪽)
 public enum Operation {
+
     PLUS  ("+", (x, y) -> x + y),
     MINUS ("-", (x, y) -> x - y),
     TIMES ("*", (x, y) -> x * y),

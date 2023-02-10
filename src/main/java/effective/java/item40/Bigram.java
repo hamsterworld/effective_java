@@ -11,6 +11,8 @@ public class Bigram {
         this.second = second;
     }
 
+    // Overriding 을 해야되는데 Overloading 을 해버렸다.
+    // @Overriding 을 했다면 이런일이 벌어지지 않았을것이다.
     public boolean equals(Bigram b) {
         return b.first == first && b.second == second;
     }

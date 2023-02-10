@@ -3,6 +3,9 @@ package effective.java.item43;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * 매서드 참조를 사용하라!
+ */
 // map.merge를 이용해 구현한 빈도표 - 람다 방식과 메서드 참조 방식을 비교해보자. (259쪽)
 public class Freq {
     public static void main(String[] args) {
