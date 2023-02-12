@@ -28,3 +28,8 @@ public class CollectionClassifier {
             System.out.println(classify(c));
     }
 }
+/**
+ * 우리의 직관에서 어긋나는 이유
+ * 오버라이딩은 동적으로 결정되지만
+ * 오버로딩은 정적으로 결정되기때문이다.
+ */

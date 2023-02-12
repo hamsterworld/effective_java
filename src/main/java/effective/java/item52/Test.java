@@ -1,5 +1,6 @@
 package effective.java.item52;
 
+import java.io.ObjectOutputStream;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -26,5 +27,7 @@ public class Test {
         ExecutorService exec = Executors.newCachedThreadPool();
         // 컴파일 에러가 난다.
 //        exec.submit(System.out::println);
+
+
     }
 }

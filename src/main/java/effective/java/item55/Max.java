@@ -4,6 +4,7 @@ import java.util.*;
 
 // 반환 타입으로 Optional<T> 사용하기 (327-328쪽)
 public class Max {
+
 //    // 코드 55-1 컬렉션에서 최댓값을 구한다. - 컬렉션이 비었으면 예외를 던진다. (327쪽)
 //    public static <E extends Comparable<E>> E max(Collection<E> c) {
 //        if (c.isEmpty())
@@ -18,8 +19,7 @@ public class Max {
 //    }
 
 //    // 코드 55-2 컬렉션에서 최댓값을 구해 Optional<E>로 반환한다. (327쪽)
-//    public static <E extends Comparable<E>>
-//    Optional<E> max(Collection<E> c) {
+//    public static <E extends Comparable<E>> Optional<E> max(Collection<E> c) {
 //        if (c.isEmpty())
 //            return Optional.empty();
 //
@@ -32,8 +32,7 @@ public class Max {
 //    }
 
     // 코드 55-3 컬렉션에서 최댓값을 구해 Optional<E>로 반환한다. - 스트림 버전 (328쪽)
-    public static <E extends Comparable<E>>
-    Optional<E> max(Collection<E> c) {
+    public static <E extends Comparable<E>> Optional<E> max(Collection<E> c) {
         return c.stream().max(Comparator.naturalOrder());
     }
 
